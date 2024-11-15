@@ -1,23 +1,11 @@
-import logo from './logo.png';
-import './App.css';
+import "./App.css";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Vercel Deployment Success!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav></Nav>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }
