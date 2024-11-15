@@ -4,6 +4,7 @@ import card_1 from "./images/banner-cards/card-1.png";
 import card_2 from "./images/banner-cards/card-2.png";
 import card_3 from "./images/banner-cards/card-3.png";
 import card_4 from "./images/banner-cards/card-4.png";
+import ServiceCard from "./components/Service-card";
 
 function Landing() {
   return (
@@ -31,7 +32,7 @@ function Landing() {
         </div>
       </div>
       {/*card container*/}
-      <div className="flex h-1/5 w-full items-center justify-center gap-6 relative bottom-8 max-md:flex-col max-md:h-[800px] max-md:bottom-0 max-md:py-10">
+      <div className="flex h-1/5 w-full items-center justify-center gap-6 relative bottom-8 max-md:hidden">
         <div
           className="h-full aspect-square bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${card_1})` }}
@@ -49,12 +50,14 @@ function Landing() {
           style={{ backgroundImage: `url(${card_4})` }}
         ></div>
       </div>
-      {/*test*/}
+      {/*welcome to silicon radon... */}
       <div
-        className="flex flex-col gap-3 items-center justify-center h-[300px] w-full bg-no-repeat bg-cover bg-fixed max-sm:h-fit max-sm:py-6"
+        className="flex flex-col gap-3 px-9 items-center justify-center h-[300px] w-full bg-no-repeat bg-cover bg-fixed bg-center max-sm:h-fit max-sm:py-6"
         style={{ backgroundImage: `url(${welcome_img})` }}
       >
-        <h1 className="text-3xl text-green-950 max-md:text-xl">Welcome To Silicon Radon Networks</h1>
+        <h1 className="pt-serif-caption-regular text-3xl text-green-950 max-md:text-xl">
+          Welcome To Silicon Radon Networks
+        </h1>
         <p className="text-sm max-md:text-xs">
           Welcome to Silicon Radon Networks (Pvt) Ltd where innovation meets
           excellence in IT solutions. At Silicon Radon Networks, we specialize
@@ -76,7 +79,73 @@ function Landing() {
           Networks (Pvt) Ltd.
         </p>
       </div>
-      <div className="h-[600px] "></div>
+      <div className="h-fit w-full flex flex-col justify-center items-center p-[100px] max-sm:p-[30px]">
+        <h1 className="text-4xl uppercase w-full text-start">Our Services</h1>
+
+        {/* Carousel visible only on max-md */}
+        <div className="hidden max-md:flex w-full overflow-x-auto">
+          <div className="flex flex-nowrap max-md:gap-4">
+            <ServiceCard
+              whichImg="mob"
+              cardTitle="Mobile Application Development"
+              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              imgOnSide="true"
+            />
+            <ServiceCard
+              whichImg="desk"
+              cardTitle="Desktop Application Development"
+              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+            />
+            <ServiceCard
+              whichImg="web"
+              cardTitle="Web Development"
+              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+            />
+            <ServiceCard
+              whichImg="uxui"
+              cardTitle="UI/UX Designing"
+              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+            />
+            <ServiceCard
+              whichImg="va"
+              cardTitle="Virtual Assistant"
+              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              imgOnSide="true"
+            />
+          </div>
+        </div>
+
+        {/* Static grid for larger screens */}
+        <div className="w-full flex flex-wrap justify-center max-md:hidden">
+          <ServiceCard
+            whichImg="mob"
+            cardTitle="Mobile Application Development"
+            cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+            imgOnSide="true"
+          />
+          <ServiceCard
+            whichImg="desk"
+            cardTitle="Desktop Application Development"
+            cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+          />
+          <ServiceCard
+            whichImg="web"
+            cardTitle="Web Development"
+            cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+          />
+          <ServiceCard
+            whichImg="uxui"
+            cardTitle="UI/UX Designing"
+            cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+          />
+          <ServiceCard
+            whichImg="va"
+            cardTitle="Virtual Assistant"
+            cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+            imgOnSide="true"
+          />
+        </div>
+      </div>
     </>
   );
 }
