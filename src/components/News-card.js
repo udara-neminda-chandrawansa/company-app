@@ -1,6 +1,6 @@
 function NewsCard({ whichImg, cardText }) {
   return (
-    <div className="flex flex-col h-[280px] w-[400px] shadow-lg">
+    <div className="flex flex-col h-[280px] w-[400px] shadow-md">
       <img
         src={whichImg}
         className="h-[200px] object-cover"
