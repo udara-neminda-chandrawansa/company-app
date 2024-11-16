@@ -17,9 +17,19 @@ import nextjs_i from "./images/dev-logos/logos_nextjs-icon.png";
 import python_i from "./images/dev-logos/logos_python.png";
 import springboot_i from "./images/dev-logos/bxl_spring-boot.png";
 import java_i from "./images/dev-logos/logos_java.png";
+import quality from "./images/our-quality-img.png";
 import { Carousel } from "flowbite-react";
+import { useRef } from "react";
 
 function Landing() {
+  const qualityEnd = useRef(null);
+
+  const scrollDown = () => {
+    document.getElementById("quality-scrollable").scrollTo({
+      top: qualityEnd.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       {/*Banner*/}
@@ -427,6 +437,77 @@ function Landing() {
           </div>
         </div>
       </div>
+      {/*our quality*/}
+      <div
+        className="flex justify-between h-fit bg-no-repeat bg-cover bg-fixed bg-center"
+        style={{ backgroundImage: `url(${quality})` }}
+      >
+        <div className="w-1/2 flex flex-col justify-center">
+          <div>
+            <h1 className="text-white text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-base text-start pl-12 max-sm:pl-3">
+              The Best
+            </h1>
+            <h1 className="text-white text-9xl max-lg:text-8xl max-md:text-6xl max-sm:text-4xl text-start font-semibold pl-12 max-sm:pl-3">
+              Quality
+            </h1>
+            <h1 className="text-white text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-base text-start pl-12 max-sm:pl-3">
+              Software Solutions For You
+            </h1>
+          </div>
+        </div>
+        <div
+          id="quality-scrollable"
+          className="w-1/2 flex flex-col items-center gap-6 px-12 max-sm:px-4 max-lg:gap-3 max-md:text-sm max-sm:text-xs max-h-[500px] overflow-y-scroll no-scrollbar"
+        >
+          <p className="text-white text-start pt-12 max-sm:pt-4">
+            At Silicon Radon Networks, we place our customers at the heart of
+            everything we do. We’re passionate about transforming ideas into
+            reality and delivering innovative software solutions that drive real
+            business value. Here’s why our customers continue to choose us as
+            their trusted technology partner:
+          </p>
+          <p className="text-white text-start">
+            <strong>Cutting-Edge Technology:</strong> We harness the latest
+            technologies to deliver robust, scalable, and future-proof solutions
+            tailored to your business needs.
+          </p>
+          <p className="text-white text-start">
+            <strong>Cutting-Edge Technology:</strong> We harness the latest
+            technologies to deliver robust, scalable, and future-proof solutions
+            tailored to your business needs.
+          </p>
+          <p className="text-white text-start">
+            <strong>Cutting-Edge Technology:</strong> We harness the latest
+            technologies to deliver robust, scalable, and future-proof solutions
+            tailored to your business needs.
+          </p>
+          <p className="text-white text-start pb-6 max-sm:pb-2">
+            <strong>Customer-Centric Approach:</strong> Our solutions are driven
+            by a deep understanding of our clients' goals. We listen,
+            collaborate, and customize our offerings to fit your unique
+            requirements.
+          </p>
+          <button
+            onClick={scrollDown}
+            className="sticky bottom-5 bg-white rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="bi bi-arrow-down-short h-[20px] w-[20px] text-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"
+              />
+            </svg>
+          </button>
+          <span ref={qualityEnd}></span>
+        </div>
+      </div>
+      {/*test*/}
+      <div className="h-[300px]"></div>
     </>
   );
 }
