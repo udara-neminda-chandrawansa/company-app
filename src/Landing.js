@@ -1,3 +1,4 @@
+import "@coreui/coreui/dist/css/coreui.min.css";
 import banner_1 from "./images/banner/banner-1.png";
 import welcome_img from "./images/welcome-img.png";
 import client_img from "./images/client-img.png";
@@ -5,8 +6,12 @@ import card_1 from "./images/banner-cards/card-1.png";
 import card_2 from "./images/banner-cards/card-2.png";
 import card_3 from "./images/banner-cards/card-3.png";
 import card_4 from "./images/banner-cards/card-4.png";
+import news_1 from "./images/news-cards/news-1.png";
+import news_2 from "./images/news-cards/news-2.png";
+import news_3 from "./images/news-cards/news-3.png";
 import ServiceCard from "./components/Service-card";
 import ClientCard from "./components/Client-card";
+import NewsCard from "./components/News-card";
 import figma_i from "./images/dev-logos/devicon_figma.png";
 import react_i from "./images/dev-logos/skill-icons_react-dark.png";
 import laravel_i from "./images/dev-logos/logos_laravel.png";
@@ -19,6 +24,8 @@ import springboot_i from "./images/dev-logos/bxl_spring-boot.png";
 import java_i from "./images/dev-logos/logos_java.png";
 import quality from "./images/our-quality-img.png";
 import { Carousel } from "flowbite-react";
+import { CCarousel } from "@coreui/react";
+import { CCarouselItem } from "@coreui/react";
 import { useRef } from "react";
 
 function Landing() {
@@ -506,8 +513,116 @@ function Landing() {
           <span ref={qualityEnd}></span>
         </div>
       </div>
-      {/*test*/}
-      <div className="h-[300px]"></div>
+      {/*news*/}
+      <div className="h-fit w-full flex flex-col gap-12 justify-center items-center p-[100px] max-sm:p-[30px]">
+        <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl">
+          News & Upcoming Events
+        </h1>
+        {/*max-lg -> one card per slide*/}
+        <CCarousel
+          indicators
+          dark
+          className="hidden max-lg:flex w-full justify-center items-center"
+        >
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center">
+              <NewsCard
+                whichImg={news_1}
+                cardText={
+                  "Silicon Radon Networks Annual Trip & Event Will Start On 2024.12.14..."
+                }
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center">
+              <NewsCard
+                whichImg={news_2}
+                cardText={"Silicon Radon Networks Annual Award Ceremony..."}
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center">
+              <NewsCard
+                whichImg={news_3}
+                cardText={
+                  "Silicon Radon Networks 31 Night Events And Dj Party Will Be..."
+                }
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+        </CCarousel>
+        {/*else -> three cards per slide*/}
+        <CCarousel
+          indicators
+          dark
+          className="w-5/6 flex justify-center items-center max-lg:hidden"
+        >
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center gap-3">
+              <NewsCard
+                whichImg={news_1}
+                cardText={
+                  "Silicon Radon Networks Annual Trip & Event Will Start On 2024.12.14..."
+                }
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_2}
+                cardText={"Silicon Radon Networks Annual Award Ceremony..."}
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_3}
+                cardText={
+                  "Silicon Radon Networks 31 Night Events And Dj Party Will Be..."
+                }
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center gap-3">
+              <NewsCard
+                whichImg={news_1}
+                cardText={
+                  "Silicon Radon Networks Annual Trip & Event Will Start On 2024.12.14..."
+                }
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_2}
+                cardText={"Silicon Radon Networks Annual Award Ceremony..."}
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_3}
+                cardText={
+                  "Silicon Radon Networks 31 Night Events And Dj Party Will Be..."
+                }
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+          <CCarouselItem className="">
+            <div className="h-[350px] flex justify-center gap-3">
+              <NewsCard
+                whichImg={news_1}
+                cardText={
+                  "Silicon Radon Networks Annual Trip & Event Will Start On 2024.12.14..."
+                }
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_2}
+                cardText={"Silicon Radon Networks Annual Award Ceremony..."}
+              ></NewsCard>
+              <NewsCard
+                whichImg={news_3}
+                cardText={
+                  "Silicon Radon Networks 31 Night Events And Dj Party Will Be..."
+                }
+              ></NewsCard>
+            </div>
+          </CCarouselItem>
+        </CCarousel>
+      </div>
+      {/*footer*/}
+      
     </>
   );
 }
