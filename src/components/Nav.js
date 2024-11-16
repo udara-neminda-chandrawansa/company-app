@@ -1,7 +1,7 @@
 function Nav() {
   return (
-    <div className="group h-[50px] max-md:h-full">
-      <div className="flex justify-between w-full px-10 h-[50px] opacity-0 group-hover:opacity-100 transition-all delay-100 max-md:hidden">
+    <div className="group h-[50px] z-50 max-md:h-full">
+      <div className="hidden justify-between w-full px-10 h-[50px] group-hover:flex transition-all delay-100 max-md:hidden">
         <ul className="flex w-1/3 justify-evenly">
           <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
             Home

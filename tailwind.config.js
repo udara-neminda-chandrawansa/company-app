@@ -1,15 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-const flowbite = require("flowbite-react/tailwind");
+import { content as _content, plugin } from "flowbite-react/tailwind";
 
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", flowbite.content()],
-  theme: {
-    extend: {},
-  },
-  plugins: [flowbite.plugin()],
-  variants: {
-    extend: {
-      display: ["group-hover"],
-    },
+export const content = ["./src/**/*.{js,jsx,ts,tsx}", _content()];
+export const theme = {
+  extend: {},
+};
+export const plugins = [plugin()];
+export const variants = {
+  extend: {
+    display: ["group-hover"],
   },
 };

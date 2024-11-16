@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App h-full">
       {/*Nav div*/}
-      <div className="absolute w-full z-10 text-white">
+      <div className="absolute top-0 w-full z-30 text-white">
         <Nav></Nav>
       </div>
       {/*Landing Page*/}
