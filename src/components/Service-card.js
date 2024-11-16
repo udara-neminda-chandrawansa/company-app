@@ -23,7 +23,7 @@ function ServiceCard({ whichImg, cardTitle, cardText, imgOnSide }) {
           alt={`${whichImg} service`}
         />
         <div className="w-2/3 flex flex-col gap-3 justify-between max-lg:w-full max-md:h-2/3">
-          <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text">
+          <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text max-md:text-center">
             {cardTitle}
           </h1>
           <p className="text-sm px-6">{cardText}</p>
@@ -44,7 +44,7 @@ function ServiceCard({ whichImg, cardTitle, cardText, imgOnSide }) {
           className="w-full h-full object-contain max-h-[200px] max-md:h-1/3"
           alt={`${whichImg} service`}
         />
-        <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text">
+        <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text max-md:text-center">
           {cardTitle}
         </h1>
         <p className="text-sm px-6">{cardText}</p>

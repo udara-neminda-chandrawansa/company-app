@@ -1,4 +1,12 @@
+import { Carousel } from "flowbite-react";
+import { CCarousel } from "@coreui/react";
+import { CCarouselItem } from "@coreui/react";
+import { useRef } from "react";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import ServiceCard from "./components/Service-card";
+import ClientCard from "./components/Client-card";
+import NewsCard from "./components/News-card";
+import Footer from "./components/Footer";
 import banner_1 from "./images/banner/banner-1.png";
 import welcome_img from "./images/welcome-img.png";
 import client_img from "./images/client-img.png";
@@ -9,9 +17,6 @@ import card_4 from "./images/banner-cards/card-4.png";
 import news_1 from "./images/news-cards/news-1.png";
 import news_2 from "./images/news-cards/news-2.png";
 import news_3 from "./images/news-cards/news-3.png";
-import ServiceCard from "./components/Service-card";
-import ClientCard from "./components/Client-card";
-import NewsCard from "./components/News-card";
 import figma_i from "./images/dev-logos/devicon_figma.png";
 import react_i from "./images/dev-logos/skill-icons_react-dark.png";
 import laravel_i from "./images/dev-logos/logos_laravel.png";
@@ -23,10 +28,6 @@ import python_i from "./images/dev-logos/logos_python.png";
 import springboot_i from "./images/dev-logos/bxl_spring-boot.png";
 import java_i from "./images/dev-logos/logos_java.png";
 import quality from "./images/our-quality-img.png";
-import { Carousel } from "flowbite-react";
-import { CCarousel } from "@coreui/react";
-import { CCarouselItem } from "@coreui/react";
-import { useRef } from "react";
 
 function Landing() {
   const qualityEnd = useRef(null);
@@ -82,7 +83,7 @@ function Landing() {
       </div>
       {/*welcome to silicon radon... */}
       <div
-        className="flex flex-col gap-3 px-9 items-center justify-center h-[300px] w-full bg-no-repeat bg-cover bg-fixed bg-center max-sm:h-fit max-sm:py-6"
+        className="flex flex-col gap-3 px-9 items-center justify-center h-fit w-full bg-no-repeat bg-cover bg-fixed bg-center py-6"
         style={{ backgroundImage: `url(${welcome_img})` }}
       >
         <h1 className="pt-serif-caption-regular text-4xl text-green-950 max-md:text-xl">
@@ -149,7 +150,6 @@ function Landing() {
               whichImg="mob"
               cardTitle="Mobile Application Development"
               cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
-              imgOnSide="true"
             />
             <ServiceCard
               whichImg="desk"
@@ -170,7 +170,6 @@ function Landing() {
               whichImg="va"
               cardTitle="Virtual Assistant"
               cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
-              imgOnSide="true"
             />
           </Carousel>
         </div>
@@ -622,7 +621,7 @@ function Landing() {
         </CCarousel>
       </div>
       {/*footer*/}
-      
+      <Footer></Footer>
     </>
   );
 }
