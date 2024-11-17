@@ -2,12 +2,16 @@ import { Carousel } from "flowbite-react";
 import { CCarousel } from "@coreui/react";
 import { CCarouselItem } from "@coreui/react";
 import { useRef } from "react";
+import { useState, useEffect } from "react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import ServiceCard from "./components/Service-card";
 import ClientCard from "./components/Client-card";
 import NewsCard from "./components/News-card";
-import Footer from "./components/Footer";
 import banner_1 from "./images/banner/banner-1.png";
+import banner_2 from "./images/banner/banner-2.png";
+import banner_3 from "./images/banner/banner-3.png";
+import banner_4 from "./images/banner/banner-4.png";
+import banner_5 from "./images/banner/banner-5.png";
 import welcome_img from "./images/welcome-img.png";
 import client_img from "./images/client-img.png";
 import card_1 from "./images/banner-cards/card-1.png";
@@ -30,35 +34,76 @@ import java_i from "./images/dev-logos/logos_java.png";
 import quality from "./images/our-quality-img.png";
 
 function Landing() {
-  const qualityEnd = useRef(null);
+  const banners = [
+    // for storing images and banner text
+    {
+      img: banner_1,
+      text: "Silicon Radon Networks offers premier Web Development services designed to elevate your online presence. Our team of expert developers crafts responsive, dynamic, and secure websites tailored to your unique business needs. From e-commerce platforms to corporate websites, we ensure a seamless user experience and cutting-edge functionality. Partner with us to create a powerful online identity and drive your business forward with our custom web solutions.",
+    },
+    {
+      img: banner_2,
+      text: "Welcome to Silicon Radon Networks, where cutting-edge software solutions meet unparallelad innovation. Our dedicated team of experts is committed to delivering robust, scalable, and user-friendly applications tailored to your business needs. Whether you're a startup or an established enterprise, we provide the technology to drive your success. Partner with us and experience the future of software development today.",
+    },
+    {
+      img: banner_3,
+      text: "Welcome to Silicon Radon Networks (Pvt) Ltd  where innovation meets excellence in IT solutions. At Silicon Radon Networks, we specialize in delivering cutting-edge technology services that drive growth, enhance productivity, and empower businesses to succeed in the digital era. Our team of experts is committed to providing tailored networking, cybersecurity, and IT infrastructure solutions, designed to meet the unique needs of our clients.",
+    },
+    {
+      img: banner_4,
+      text: "Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.",
+    },
+    {
+      img: banner_5,
+      text: "Welcome to Silicon Radon Networks, where cutting-edge software solutions meet unparallelad innovation. Our dedicated team of experts is committed to delivering robust, scalable, and user-friendly applications tailored to your business needs. Whether you're a startup or an established enterprise, we provide the technology to drive your success. Partner with us and experience the future of software development today.",
+    },
+  ];
+  const [currentBanner, setCurrentBanner] = useState(0); // initialize current banner image/text
+  const [isTransitioning, setIsTransitioning] = useState(false); // initialize text transitioning
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentBanner((prev) => (prev + 1) % banners.length);
+        setIsTransitioning(false);
+      }, 300); // Match transition delay in bg
+    }, 7500); // 7.5 seconds
+
+    return () => clearInterval(interval);
+  });
+
+  const qualityEnd = useRef(null); // reference of 'Our Quality' right side div
 
   const scrollDown = () => {
+    // scroll to end of the 'quality-scrollable' div
     document.getElementById("quality-scrollable").scrollTo({
       top: qualityEnd.current.offsetTop,
       behavior: "smooth",
     });
   };
+
   return (
     <>
       {/*Banner*/}
       <div
-        className="flex flex-col h-4/5 bg-gradient-to-r from-black to-blue-500 bg-no-repeat bg-cover max-md:h-full"
-        style={{ backgroundImage: `url(${banner_1})` }}
+        className="flex flex-col h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-full"
+        style={{ backgroundImage: `url(${banners[currentBanner].img})` }}
       >
         {/*Top layer (backdrop)*/}
         <div className="absolute h-4/5 inset-0 bg-gradient-to-br from-[transparent] to-[#022E39] max-md:h-full"></div>
         {/*text content*/}
-        <div className="flex flex-col gap-24 w-full h-full items-center justify-center p-[100px] max-sm:p-[30px]">
+        <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
           <h1 className="text-4xl text-white z-10 font-medium w-full text-start max-lg:text-3xl max-md:text-2xl max-sm:text-xl">
             Nothing Is More Attractive Than Quality
           </h1>
-          <p className="text-sm font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-xs">
-            Our customers are at the heart of everything we do. We partner with
-            businesses of all sizes to deliver tailored software solutions that
-            drive growth, efficiency, and innovation. By understanding your
-            unique needs, we craft technology that empowers you to thrive in a
-            rapidly changing digital landscape. Your success is our mission, and
-            we are committed to supporting you every step of the way.
+          <p
+            className={`text-sm font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-xs transition-all duration-300 ${
+              isTransitioning
+                ? "opacity-0 translate-y-5"
+                : "opacity-100 translate-y-0"
+            }`}
+          >
+            {banners[currentBanner].text}
           </p>
         </div>
       </div>
@@ -620,8 +665,6 @@ function Landing() {
           </CCarouselItem>
         </CCarousel>
       </div>
-      {/*footer*/}
-      <Footer></Footer>
     </>
   );
 }

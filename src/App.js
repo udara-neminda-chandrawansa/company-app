@@ -1,6 +1,7 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import Landing from "./Landing";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       </div>
       {/*Landing Page*/}
       <Landing></Landing>
+      {/*footer*/}
+      <Footer></Footer>
     </div>
   );
 }
