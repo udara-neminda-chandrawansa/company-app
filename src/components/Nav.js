@@ -1,7 +1,7 @@
 function Nav() {
   return (
-    <div className="h-[50px] z-50 max-md:h-full">
-      <div className="flex justify-between w-full px-10 h-[50px] max-md:hidden">
+    <div className="h-[50px] z-50 max-[940px]:h-full">
+      <div className="flex justify-between w-full px-10 h-[50px] max-[940px]:hidden">
         <ul className="flex w-1/3 justify-evenly">
           <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
             Home
@@ -18,18 +18,18 @@ function Nav() {
         </ul>
         <ul className="flex w-1/3 justify-evenly">
           <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Careers
+            Contact Us
+          </li>
+          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+            About Us
           </li>
           <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
             News & Events
           </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Contact
-          </li>
         </ul>
       </div>
       {/*burger button*/}
-      <div className="hidden justify-center items-center max-md:flex h-[100px] aspect-square">
+      <div className="hidden justify-center items-center max-[940px]:flex h-[100px] aspect-square">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

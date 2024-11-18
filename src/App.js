@@ -1,6 +1,7 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import Landing from "./Landing";
+import AboutUs from "./AboutUs";
 import Footer from "./components/Footer";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
         <Nav></Nav>
       </div>
       {/*Landing Page*/}
-      <Landing></Landing>
+      {/*<Landing></Landing>*/}
+      <AboutUs></AboutUs>
       {/*footer*/}
       <Footer></Footer>
     </div>
