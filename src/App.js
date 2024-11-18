@@ -1,4 +1,5 @@
 import "./App.css";
+import { Route } from "wouter";
 import Nav from "./components/Nav";
 import Landing from "./Landing";
 import AboutUs from "./AboutUs";
@@ -12,8 +13,9 @@ function App() {
         <Nav></Nav>
       </div>
       {/*Landing Page*/}
-      {/*<Landing></Landing>*/}
-      <AboutUs></AboutUs>
+      <Route path="/" component={Landing} />
+      {/*About Us Page*/}
+      <Route path="/aboutus" component={AboutUs} />
       {/*footer*/}
       <Footer></Footer>
     </div>

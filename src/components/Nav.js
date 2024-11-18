@@ -1,31 +1,47 @@
+import { Link } from "wouter";
+
 function Nav() {
   return (
     <div className="h-[50px] z-50 max-[940px]:h-full">
       <div className="flex justify-between w-full px-10 h-[50px] max-[940px]:hidden">
-        <ul className="flex w-1/3 justify-evenly">
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Home
-          </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Company
-          </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Project
-          </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Partners
-          </li>
+        <ul className="flex w-1/3 justify-evenly items-center h-full">
+          <Link href="/" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              Home
+            </li>
+          </Link>
+          <Link href="/company" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              Company
+            </li>
+          </Link>
+          <Link href="/project" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              Project
+            </li>
+          </Link>
+          <Link href="/partners" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              Partners
+            </li>
+          </Link>
         </ul>
-        <ul className="flex w-1/3 justify-evenly">
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            Contact Us
-          </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            About Us
-          </li>
-          <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-            News & Events
-          </li>
+        <ul className="flex w-1/3 justify-evenly items-center h-full">
+          <Link href="/contact" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              Contact Us
+            </li>
+          </Link>
+          <Link href="/aboutus" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              About Us
+            </li>
+          </Link>
+          <Link href="/news" className="text-white no-underline">
+            <li className="flex items-center justify-center text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
+              News & Events
+            </li>
+          </Link>
         </ul>
       </div>
       {/*burger button*/}
