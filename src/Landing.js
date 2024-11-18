@@ -13,6 +13,7 @@ import banner_3 from "./images/banner/banner-3.png";
 import banner_4 from "./images/banner/banner-4.png";
 import banner_5 from "./images/banner/banner-5.png";
 import welcome_img from "./images/welcome-img.png";
+import welcome_img_mob from "./images/welcome-img-mobile.png";
 import client_img from "./images/client-img.png";
 import card_1 from "./images/banner-cards/card-1.png";
 import card_2 from "./images/banner-cards/card-2.png";
@@ -32,6 +33,7 @@ import python_i from "./images/dev-logos/logos_python.png";
 import springboot_i from "./images/dev-logos/bxl_spring-boot.png";
 import java_i from "./images/dev-logos/logos_java.png";
 import quality from "./images/our-quality-img.png";
+import quality_mob from "./images/our-quality-img-mob.png";
 
 function Landing() {
   const banners = [
@@ -86,18 +88,18 @@ function Landing() {
     <>
       {/*Banner*/}
       <div
-        className="flex flex-col h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-full"
+        className="flex flex-col min-h-fit h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-full"
         style={{ backgroundImage: `url(${banners[currentBanner].img})` }}
       >
         {/*Top layer (backdrop)*/}
         <div className="absolute h-4/5 inset-0 bg-gradient-to-br from-[transparent] to-[#022E39] max-md:h-full"></div>
         {/*text content*/}
         <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
-          <h1 className="text-4xl text-white z-10 font-medium w-full text-start max-lg:text-3xl max-md:text-2xl max-sm:text-xl">
+          <h1 className="text-5xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
             Nothing Is More Attractive Than Quality
           </h1>
           <p
-            className={`text-sm font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-xs transition-all duration-300 ${
+            className={`text-base font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
               isTransitioning
                 ? "opacity-0 translate-y-5"
                 : "opacity-100 translate-y-0"
@@ -110,26 +112,32 @@ function Landing() {
       {/*card container*/}
       <div className="flex h-1/5 w-full items-center justify-center gap-6 relative bottom-8 max-md:hidden">
         <div
-          className="w-1/6 aspect-square bg-no-repeat bg-cover"
+          className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${card_1})` }}
         ></div>
         <div
-          className="w-1/6 aspect-square bg-no-repeat bg-cover"
+          className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${card_2})` }}
         ></div>
         <div
-          className="w-1/6 aspect-square bg-no-repeat bg-cover"
+          className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${card_3})` }}
         ></div>
         <div
-          className="w-1/6 aspect-square bg-no-repeat bg-cover"
+          className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${card_4})` }}
         ></div>
       </div>
+      {/*spacing div*/}
+      <div className="max-md:h-0 h-[30px]"></div>
       {/*welcome to silicon radon... */}
       <div
         className="flex flex-col gap-3 px-9 items-center justify-center h-fit w-full bg-no-repeat bg-cover bg-fixed bg-center py-6"
-        style={{ backgroundImage: `url(${welcome_img})` }}
+        style={
+          window.innerWidth > 768
+            ? { backgroundImage: `url(${welcome_img})` }
+            : { backgroundImage: `url(${welcome_img_mob})` }
+        }
       >
         <h1 className="pt-serif-caption-regular text-4xl text-green-950 max-md:text-xl">
           Welcome To Silicon Radon Networks
@@ -257,7 +265,7 @@ function Landing() {
         <h1 className="relative z-10 text-4xl text-white underline underline-offset-8 max-md:text-xl">
           Our Clients
         </h1>
-        <p className="text-sm text-white font-thin max-sm:text-xs">
+        <p className="text-sm text-white font-thin">
           Silicon Radon Networks offers premier Web Development services
           designed to elevate your online presence. Our team of expert
           developers crafts responsive, dynamic, and secure websites tailored to
@@ -304,6 +312,7 @@ function Landing() {
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
+              cardAuthor={"- Dr. Darshana Haputhanthri -"}
             ></ClientCard>
             <ClientCard
               whichImg={"slcus"}
@@ -311,6 +320,7 @@ function Landing() {
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
+              cardAuthor={"- Dr. Darshana Haputhanthri -"}
             ></ClientCard>
             <ClientCard
               whichImg={"sample"}
@@ -318,6 +328,7 @@ function Landing() {
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
+              cardAuthor={"- Dr. Darshana Haputhanthri -"}
             ></ClientCard>
           </Carousel>
         </div>
@@ -329,6 +340,7 @@ function Landing() {
             cardText={
               "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
             }
+            cardAuthor={"- Dr. Darshana Haputhanthri -"}
           ></ClientCard>
           <ClientCard
             whichImg={"slcus"}
@@ -336,6 +348,7 @@ function Landing() {
             cardText={
               "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
             }
+            cardAuthor={"- Dr. Darshana Haputhanthri -"}
           ></ClientCard>
           <ClientCard
             whichImg={"sample"}
@@ -343,6 +356,7 @@ function Landing() {
             cardText={
               "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
             }
+            cardAuthor={"- Dr. Darshana Haputhanthri -"}
           ></ClientCard>
         </div>
       </div>
@@ -351,7 +365,7 @@ function Landing() {
         <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl">
           Our Strength
         </h1>
-        <p className="text-sm max-sm:text-xs">
+        <p className="text-sm">
           Coding languages are the building blocks of software development,
           enabling us to create tailored, efficient, and scalable solutions. At
           Silicon Radon Networks, we specialize in languages like Python, Java,
@@ -442,47 +456,47 @@ function Landing() {
         </div>
         {/* Static grid for larger screens */}
         <div className="flex flex-col gap-6 px-20 w-full max-md:hidden">
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-10 justify-center">
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${figma_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${react_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${laravel_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${nodejs_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${flutter_i})` }}
             ></div>
           </div>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-10 justify-center">
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${catppuccin_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${nextjs_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${python_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${springboot_i})` }}
             ></div>
             <div
-              className="w-1/12 aspect-square rounded-lg bg-no-repeat bg-contain"
+              className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${java_i})` }}
             ></div>
           </div>
@@ -490,27 +504,33 @@ function Landing() {
       </div>
       {/*our quality*/}
       <div
-        className="flex justify-between h-fit bg-no-repeat bg-cover bg-fixed bg-center"
-        style={{ backgroundImage: `url(${quality})` }}
+        className="flex justify-between h-fit bg-no-repeat bg-cover bg-fixed bg-center max-md:flex-col max-md:bg-t"
+        style={
+          window.innerWidth > 768
+            ? { backgroundImage: `url(${quality})` }
+            : { backgroundImage: `url(${quality_mob})` }
+        }
       >
-        <div className="w-1/2 flex flex-col justify-center">
-          <div>
-            <h1 className="text-white text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-base text-start pl-12 max-sm:pl-3">
-              The Best
-            </h1>
-            <h1 className="text-white text-9xl max-lg:text-8xl max-md:text-6xl max-sm:text-4xl text-start font-semibold pl-12 max-sm:pl-3">
-              Quality
-            </h1>
-            <h1 className="text-white text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-base text-start pl-12 max-sm:pl-3">
-              Software Solutions For You
-            </h1>
+        <div className="w-1/2 flex flex-col justify-center max-md:w-full max-md:py-24">
+          <div className="flex items-center flex-col">
+            <div className="w-fit">
+              <h1 className="text-white text-3xl max-lg:text-2xl text-start max-[375px]:text-xl">
+                The Best
+              </h1>
+              <h1 className="text-white text-9xl max-lg:text-8xl text-start font-bold max-[375px]:text-7xl">
+                Quality
+              </h1>
+              <h1 className="text-white text-3xl text-nowrap max-lg:text-2xl text-start max-[375px]:text-xl">
+                Software Solutions For You
+              </h1>
+            </div>
           </div>
         </div>
         <div
           id="quality-scrollable"
-          className="w-1/2 flex flex-col items-center gap-6 px-12 max-sm:px-4 max-lg:gap-3 max-md:text-sm max-sm:text-xs max-h-[500px] overflow-y-scroll no-scrollbar"
+          className="w-1/2 flex flex-col items-center gap-6 px-12 max-md:bg-[#000000CF] max-sm:px-4 max-lg:gap-3 max-md:text-sm max-sm:text-xs max-h-[500px] overflow-y-scroll no-scrollbar max-md:w-full max-md:h-1/2"
         >
-          <p className="text-white text-start pt-12 max-sm:pt-4">
+          <p className="text-white text-start pt-12 max-md:pt-6">
             At Silicon Radon Networks, we place our customers at the heart of
             everything we do. We’re passionate about transforming ideas into
             reality and delivering innovative software solutions that drive real
@@ -540,7 +560,7 @@ function Landing() {
           </p>
           <button
             onClick={scrollDown}
-            className="sticky bottom-5 bg-white rounded-full"
+            className="sticky bottom-5 bg-white rounded-full max-md:hidden"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -554,7 +574,7 @@ function Landing() {
               />
             </svg>
           </button>
-          <span ref={qualityEnd}></span>
+          <span className="max-md:hidden" ref={qualityEnd}></span>
         </div>
       </div>
       {/*news*/}
