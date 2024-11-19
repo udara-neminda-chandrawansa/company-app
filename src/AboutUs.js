@@ -1,7 +1,11 @@
 import { Carousel } from "flowbite-react";
+import { useState } from "react";
 import AwardCard from "./components/Award-card";
 import banner from "./images/AboutUs/banner.png";
 import VideoPlayer from "./components/Video";
+import TextTypingAnimation from "./components/TextTypingAnimation";
+import { BlurIn } from "./components/TextBlurIn.tsx";
+import { BlurImage } from "./components/BlurImage.tsx";
 import ceo from "./images/AboutUs/ceo.png";
 import depositPhotos from "./images/AboutUs/partners/depositphotos.png";
 import slair from "./images/AboutUs/partners/slair.png";
@@ -14,9 +18,20 @@ import colorful from "./images/AboutUs/partners/colorful.png";
 import gam1 from "./images/AboutUs/branches/gampaha/gam1.png";
 import gam2 from "./images/AboutUs/branches/gampaha/gam2.png";
 import gam3 from "./images/AboutUs/branches/gampaha/gam3.png";
+import col1 from "./images/AboutUs/branches/colombo/col1.png";
+import col2 from "./images/AboutUs/branches/colombo/col2.png";
+import col3 from "./images/AboutUs/branches/colombo/col3.png";
+import anu1 from "./images/AboutUs/branches/anuradhapura/anu1.jpg";
+import anu2 from "./images/AboutUs/branches/anuradhapura/anu2.jpg";
+import anu3 from "./images/AboutUs/branches/anuradhapura/anu3.jpg";
+import kan1 from "./images/AboutUs/branches/kandy/kan1.png";
+import kan2 from "./images/AboutUs/branches/kandy/kan2.jpg";
+import kan3 from "./images/AboutUs/branches/kandy/kan3.jpg";
 import brbg from "./images/AboutUs/branches/branches-background.png";
 
 function AboutUs() {
+  const [selectedBranch, setBranch] = useState("Gampaha");
+
   return (
     <>
       {/*Banner*/}
@@ -219,19 +234,65 @@ function AboutUs() {
         <span className="hidden max-md:flex h-11"></span>
         <div className="w-5/6 flex gap-1 max-md:flex-col">
           <div className="w-3/5 flex flex-col gap-1 max-md:w-full">
-            <img src={gam1} alt="1" className="w-full"></img>
+            <BlurImage
+              key={`1-${selectedBranch}`} // Unique key per image
+              src={
+                selectedBranch === "Gampaha"
+                  ? gam1
+                  : selectedBranch === "Colombo"
+                  ? col1
+                  : selectedBranch === "Anuradhapura"
+                  ? anu1
+                  : kan1
+              }
+              alt="1"
+              className="w-full h-[300px] max-sm:h-[150px] object-cover"
+              myDuration={0.8}
+            />
             <div className="flex">
-              <img src={gam2} alt="2" className="w-1/2 pr-1"></img>
-              <img src={gam3} alt="3" className="w-1/2"></img>
+              <BlurImage
+                key={`2-${selectedBranch}`} // Unique key per image
+                src={
+                  selectedBranch === "Gampaha"
+                    ? gam2
+                    : selectedBranch === "Colombo"
+                    ? col2
+                    : selectedBranch === "Anuradhapura"
+                    ? anu2
+                    : kan2
+                }
+                alt="2"
+                className="w-1/2 pr-1 h-[250px] max-sm:h-[150px] object-cover"
+                myDuration={1.3}
+              />
+              <BlurImage
+                key={`3-${selectedBranch}`} // Unique key per image
+                src={
+                  selectedBranch === "Gampaha"
+                    ? gam3
+                    : selectedBranch === "Colombo"
+                    ? col3
+                    : selectedBranch === "Anuradhapura"
+                    ? anu3
+                    : kan3
+                }
+                alt="3"
+                className="w-1/2 h-[250px] max-sm:h-[150px] object-cover"
+                myDuration={1.8}
+              />
             </div>
           </div>
-          <div className="w-2/5 bg-[#006E8A] text-white flex flex-col justify-center items-center gap-6 max-md:gap-0 max-md:w-full">
+          <div className="w-2/5 bg-[#006E8A] text-white flex flex-col justify-center items-center gap-6 max-md:gap-0 max-md:w-full max-md:min-h-[300px] max-md:justify-between">
             <h1 className="text-center py-6 tiro-bangla w-full hidden m-0 max-md:block">
-              Gampaha Branch
+              <BlurIn key={selectedBranch}>{selectedBranch} Branch</BlurIn>
             </h1>
             <div className="w-full px-12 tiro-bangla max-md:hidden">
-              <h1 className="text-start w-full">Gampaha</h1>
-              <h1 className="text-end w-full">Branch</h1>
+              <h1 className="text-start w-full">
+                <BlurIn key={selectedBranch}>{selectedBranch}</BlurIn>
+              </h1>
+              <h1 className="text-end w-full">
+                <BlurIn key={selectedBranch}>Branch</BlurIn>
+              </h1>
             </div>
             <div className="w-full px-12">
               <ul className="flex flex-col m-0 max-md:pb-6 text-start gap-3">
@@ -245,7 +306,27 @@ function AboutUs() {
                     <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
                   </svg>
-                  Open At 9.00 am to 4.00 pm
+                  {selectedBranch === "Gampaha" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="Open At 9.00 am to 4.00 pm"
+                    />
+                  ) : selectedBranch === "Colombo" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="Open At 9.30 am to 4.30 pm"
+                    />
+                  ) : selectedBranch === "Anuradhapura" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="Open At 8.00 am to 3.00 pm"
+                    />
+                  ) : (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="Open At 8.30 am to 3.30 pm"
+                    />
+                  )}
                 </li>
                 <li className="flex items-center gap-3">
                   <svg
@@ -259,9 +340,29 @@ function AboutUs() {
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  033 22 31 456
+                  {selectedBranch === "Gampaha" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="033 22 31 456"
+                    />
+                  ) : selectedBranch === "Colombo" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="011 32 22 345"
+                    />
+                  ) : selectedBranch === "Anuradhapura" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="022 44 52 432"
+                    />
+                  ) : (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="044 12 32 365"
+                    />
+                  )}
                 </li>
-                <li className="flex items-center gap-3">
+                <li className="flex items-center gap-3 transition-all delay-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -270,7 +371,28 @@ function AboutUs() {
                   >
                     <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5z" />
                   </svg>
-                  201 / P Kandy Road ,Yakkala, Gampaha
+
+                  {selectedBranch === "Gampaha" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="0201 / P Kandy Road ,Yakkala, Gampaha"
+                    />
+                  ) : selectedBranch === "Colombo" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="65 / A De Fonseka Road, Bambalapitiya"
+                    />
+                  ) : selectedBranch === "Anuradhapura" ? (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="45 Kala Wewa Road, Anuradhapura"
+                    />
+                  ) : (
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text="65 / B Temple Road, Kandy"
+                    />
+                  )}
                 </li>
                 <li className="flex items-center gap-3">
                   <svg
@@ -282,10 +404,21 @@ function AboutUs() {
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg>
                   <a
-                    href="https://www.google.com/"
+                    href={
+                      selectedBranch === "Gampaha"
+                        ? "https://www.google.com/"
+                        : selectedBranch === "Colombo"
+                        ? "https://www.youtube.com/"
+                        : selectedBranch === "Anuradhapura"
+                        ? "https://www.duckduckgo.com/"
+                        : "https://www.facebook.com/"
+                    }
                     className="text-white underline underline-offset-4"
                   >
-                    View Location
+                    <TextTypingAnimation
+                      key={selectedBranch}
+                      text={"View Location"}
+                    ></TextTypingAnimation>
                   </a>
                 </li>
               </ul>
@@ -294,16 +427,40 @@ function AboutUs() {
         </div>
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-5/6 flex items-center">
           <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:text-xs">
-            <li className="cursor-pointer max-md:p-1 max-[350px]:p-0">
+            <li
+              id="gam-b-clickable"
+              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
+                selectedBranch === "Gampaha" ? "opacity-100" : "opacity-50"
+              }`}
+              onClick={() => setBranch("Gampaha")}
+            >
               Gampaha Branch
             </li>
-            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+            <li
+              id="col-b-clickable"
+              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
+                selectedBranch === "Colombo" ? "opacity-100" : "opacity-50"
+              }`}
+              onClick={() => setBranch("Colombo")}
+            >
               Colombo Branch
             </li>
-            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+            <li
+              id="anu-b-clickable"
+              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
+                selectedBranch === "Anuradhapura" ? "opacity-100" : "opacity-50"
+              }`}
+              onClick={() => setBranch("Anuradhapura")}
+            >
               Anuradhapura Branch
             </li>
-            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+            <li
+              id="kan-b-clickable"
+              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
+                selectedBranch === "Kandy" ? "opacity-100" : "opacity-50"
+              }`}
+              onClick={() => setBranch("Kandy")}
+            >
               Kandy Branch
             </li>
           </ul>
