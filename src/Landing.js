@@ -88,11 +88,11 @@ function Landing() {
     <>
       {/*Banner*/}
       <div
-        className="flex flex-col min-h-fit h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-full"
+        className="flex flex-col min-h-fit h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-[100vh]"
         style={{ backgroundImage: `url(${banners[currentBanner].img})` }}
       >
         {/*Top layer (backdrop)*/}
-        <div className="absolute h-4/5 inset-0 bg-gradient-to-br from-[transparent] to-[#022E39] max-md:h-full"></div>
+        <div className="absolute h-4/5 inset-0 bg-gradient-to-br from-[transparent] to-[#022E39] max-md:h-[100vh]"></div>
         {/*text content*/}
         <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
           <h1 className="text-5xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
