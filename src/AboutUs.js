@@ -26,9 +26,11 @@ function AboutUs() {
       >
         <div className="w-full flex text-white text-start px-12">
           <h1>
-            <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">“</span>
+            <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              “
+            </span>
           </h1>
-          <h1>
+          <h1 className="max-md:text-center">
             <span className="tiro-tamil max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
               At Silicon Radon Networks, we are dedicated to empowering
               businesses with cutting-edge IT solutions tailored to the demands
@@ -36,13 +38,15 @@ function AboutUs() {
               innovation and excellence, we have become a trusted partner for
               companies seeking reliable and scalable technology solutions.
             </span>
-            <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">”</span>
+            <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              ”
+            </span>
           </h1>
         </div>
       </div>
       {/*Mission*/}
       <div className="h-fit py-12 gap-12 flex items-center flex-col">
-        <h1 className="poltawski-nowy text-4xl text-[#022E39] max-md:text-xl">
+        <h1 className="poltawski-nowy text-4xl text-[#022E39] max-md:text-3xl">
           Our Mission
         </h1>
         <p className="text-3xl max-md:text-2xl max-sm:text-xl font-light px-24 max-md:px-12">
@@ -58,10 +62,17 @@ function AboutUs() {
       <VideoPlayer></VideoPlayer>
       {/*CEO*/}
       <div className="bg-[#00838F26] h-fit py-12 flex text-start px-24 max-md:px-6 gap-6 max-md:flex-col">
-        <img src={ceo} className="max-md:max-h-[400px] object-contain" alt="ceo"></img>
-        <div className="flex flex-col gap-6">
-          <h1 className="tiro-bangla text-5xl p-0 m-0">C.E.O</h1>
-          <p className="text-xl font-light text-justify p-0 m-0">
+        <h1 className="tiro-bangla text-5xl p-0 m-0 hidden text-center max-md:block">
+          C.E.O
+        </h1>
+        <img
+          src={ceo}
+          className="max-md:max-h-[400px] object-contain"
+          alt="ceo"
+        ></img>
+        <div className="flex flex-col gap-6 max-md:items-center">
+          <h1 className="tiro-bangla text-5xl p-0 m-0 max-md:hidden">C.E.O</h1>
+          <p className="text-xl font-light text-justify p-0 m-0 max-md:text-center">
             At Silicon Radon Networks, we believe that your success is our
             success. By leveraging our expertise, experience, and
             forward-thinking approach, we ensure that every project we undertake
@@ -201,10 +212,11 @@ function AboutUs() {
       </div>
       {/*Branches*/}
       <div
-        className="py-12 gap-12 flex flex-col items-center bg-fixed bg-cover"
+        className="py-12 gap-12 max-md:gap-1 flex flex-col items-center bg-fixed bg-cover"
         style={{ backgroundImage: `url(${brbg})` }}
       >
         <h1 className="tiro-bangla p-0 m-0 text-4xl">Our Branches</h1>
+        <span className="hidden max-md:flex h-11"></span>
         <div className="w-5/6 flex gap-1 max-md:flex-col">
           <div className="w-3/5 flex flex-col gap-1 max-md:w-full">
             <img src={gam1} alt="1" className="w-full"></img>
@@ -213,13 +225,16 @@ function AboutUs() {
               <img src={gam3} alt="3" className="w-1/2"></img>
             </div>
           </div>
-          <div className="w-2/5 bg-[#006E8A] text-white flex flex-col justify-center items-center gap-6 max-md:w-full">
-            <div className="w-full px-12 tiro-bangla max-md:py-6">
+          <div className="w-2/5 bg-[#006E8A] text-white flex flex-col justify-center items-center gap-6 max-md:gap-0 max-md:w-full">
+            <h1 className="text-center py-6 tiro-bangla w-full hidden m-0 max-md:block">
+              Gampaha Branch
+            </h1>
+            <div className="w-full px-12 tiro-bangla max-md:hidden">
               <h1 className="text-start w-full">Gampaha</h1>
               <h1 className="text-end w-full">Branch</h1>
             </div>
             <div className="w-full px-12">
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col m-0 max-md:pb-6 text-start gap-3">
                 <li className="flex items-center gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -277,12 +292,20 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="bg-[#006E8A] h-[100px] w-5/6 flex items-center">
-          <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:flex-col">
-            <li className="cursor-pointer">Gampaha Branch</li>
-            <li className="cursor-pointer opacity-50">Colombo Branch</li>
-            <li className="cursor-pointer opacity-50">Anuradhapura Branch</li>
-            <li className="cursor-pointer opacity-50">Kandy Branch</li>
+        <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-5/6 flex items-center">
+          <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:text-xs">
+            <li className="cursor-pointer max-md:p-1 max-[350px]:p-0">
+              Gampaha Branch
+            </li>
+            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+              Colombo Branch
+            </li>
+            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+              Anuradhapura Branch
+            </li>
+            <li className="cursor-pointer opacity-50 max-md:p-1 max-[350px]:p-0">
+              Kandy Branch
+            </li>
           </ul>
         </div>
       </div>
