@@ -1,5 +1,6 @@
 import banner from "./images/ContactUs/banner.png";
 import { useState } from "react";
+import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 import TextTypingAnimation from "./components/TextTypingAnimation";
 
 function ContactUs() {
@@ -7,76 +8,78 @@ function ContactUs() {
 
   return (
     <div>
-      <div
-        className="h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="bg-[#006E8AB2] h-2/3 flex">
-          <div className="flex flex-col w-1/2 text-start text-white p-12">
-            <h1 className="font-light">Contact Us</h1>
-            <p className="text-2xl font-light" style={{ lineHeight: "50px" }}>
-              Reach out to Silicon Radon Networks for any inquiries about our IT
-              solutions, network services, or support needs. Our team is ready
-              to assist you with expert advice and tailored solutions to elevate
-              your business. Get in touch via phone, email, or by filling out
-              the form below – we look forward to connecting!
-            </p>
-          </div>
-          <div className="w-1/2 p-12">
-            <div className="bg-[#FFFFFF66] h-full w-full rounded-md p-6 flex flex-col gap-3">
-              <div className="relative z-0">
-                <input
-                  type="text"
-                  id="name"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-black peer"
-                  placeholder=" "
-                />
-                <label
-                  htmlFor="name"
-                  className="absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 left-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-                >
-                  Enter Your Name
-                </label>
-              </div>
-              <div className="relative z-0">
-                <input
-                  type="email"
-                  id="email"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-black peer"
-                  placeholder=" "
-                />
-                <label
-                  htmlFor="email"
-                  className="absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 left-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-                >
-                  Enter Your Email
-                </label>
-              </div>
-              <textarea
-                id="message"
-                className="flex flex-grow p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black "
-                placeholder="Enter Your Message"
-              ></textarea>
-              <span className="w-full flex justify-end">
-                <button
-                  type="button"
-                  className="w-fit text-black bg-white hover:bg-black focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center gap-6"
-                >
-                  Send
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    className="bi bi-send w-[16px] h-[16px]"
-                    viewBox="0 0 16 16"
+      <AnimatedWrapper>
+        <div
+          className="h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
+          style={{ backgroundImage: `url(${banner})` }}
+        >
+          <div className="bg-[#006E8AB2] h-2/3 flex">
+            <div className="flex flex-col w-1/2 text-start text-white p-12">
+              <h1 className="font-light">Contact Us</h1>
+              <p className="text-2xl font-light" style={{ lineHeight: "50px" }}>
+                Reach out to Silicon Radon Networks for any inquiries about our
+                IT solutions, network services, or support needs. Our team is
+                ready to assist you with expert advice and tailored solutions to
+                elevate your business. Get in touch via phone, email, or by
+                filling out the form below – we look forward to connecting!
+              </p>
+            </div>
+            <div className="w-1/2 p-12">
+              <div className="bg-[#FFFFFF66] h-full w-full rounded-md p-6 flex flex-col gap-3">
+                <div className="relative z-0">
+                  <input
+                    type="text"
+                    id="name"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-black peer"
+                    placeholder=" "
+                  />
+                  <label
+                    htmlFor="name"
+                    className="absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 left-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
-                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
-                  </svg>
-                </button>
-              </span>
+                    Enter Your Name
+                  </label>
+                </div>
+                <div className="relative z-0">
+                  <input
+                    type="email"
+                    id="email"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-black peer"
+                    placeholder=" "
+                  />
+                  <label
+                    htmlFor="email"
+                    className="absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 left-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-black peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                  >
+                    Enter Your Email
+                  </label>
+                </div>
+                <textarea
+                  id="message"
+                  className="flex flex-grow p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black "
+                  placeholder="Enter Your Message"
+                ></textarea>
+                <span className="w-full flex justify-end">
+                  <button
+                    type="button"
+                    className="w-fit text-black bg-white hover:bg-black focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center gap-6"
+                  >
+                    Send
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="bi bi-send w-[16px] h-[16px]"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                    </svg>
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </AnimatedWrapper>
       <div className="h-[100vh] p-12 gap-12 flex flex-col">
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-full flex items-center rounded-lg">
           <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:text-xs">
