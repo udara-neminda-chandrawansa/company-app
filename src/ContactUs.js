@@ -107,12 +107,13 @@ function ContactUs() {
           </ul>
           {/*only shown on max-md*/}
           <Carousel
-            className="text-white h-[50px] hidden max-md:block"
+            className="text-white h-[50px] hidden max-md:block pointer-events-none"
             indicators={false}
             slide={false}
             aria-current={currentIndex} // Explicitly set the current index
             leftControl={
               <span
+                className="pointer-events-auto"
                 onClick={() =>
                   setBranchByIndex(
                     (currentIndex - 1 + branches.length) % branches.length
@@ -131,6 +132,7 @@ function ContactUs() {
             }
             rightControl={
               <span
+                className="pointer-events-auto"
                 onClick={() =>
                   setBranchByIndex((currentIndex + 1) % branches.length)
                 }
