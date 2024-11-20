@@ -9,7 +9,8 @@ function ContactUs() {
   const branches = ["Gampaha", "Colombo", "Anuradhapura", "Kandy"]; // for branch carousel
   const [currentIndex, setCurrentIndex] = useState(0); // for branch carousel
 
-  const setBranchByCarousel = (index) => { // for branch carousel
+  const setBranchByIndex = (index) => {
+    // for branch carousel
     setCurrentIndex(index);
     setBranch(branches[index]);
   };
@@ -92,51 +93,32 @@ function ContactUs() {
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-full flex items-center rounded-lg">
           {/*only shown on md*/}
           <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-lg:text-sm max-md:hidden">
-            <li
-              id="gam-b-clickable"
-              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
-                selectedBranch === "Gampaha" ? "opacity-100" : "opacity-50"
-              }`}
-              onClick={() => setBranch("Gampaha")}
-            >
-              Gampaha Branch
-            </li>
-            <li
-              id="col-b-clickable"
-              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
-                selectedBranch === "Colombo" ? "opacity-100" : "opacity-50"
-              }`}
-              onClick={() => setBranch("Colombo")}
-            >
-              Colombo Branch
-            </li>
-            <li
-              id="anu-b-clickable"
-              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
-                selectedBranch === "Anuradhapura" ? "opacity-100" : "opacity-50"
-              }`}
-              onClick={() => setBranch("Anuradhapura")}
-            >
-              Anuradhapura Branch
-            </li>
-            <li
-              id="kan-b-clickable"
-              className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
-                selectedBranch === "Kandy" ? "opacity-100" : "opacity-50"
-              }`}
-              onClick={() => setBranch("Kandy")}
-            >
-              Kandy Branch
-            </li>
+            {branches.map((branch, index) => (
+              <li
+                key={branch}
+                className={`cursor-pointer ${
+                  selectedBranch === branch ? "opacity-100" : "opacity-50"
+                }`}
+                onClick={() => setBranchByIndex(index, "done by normal")}
+              >
+                {branch} Branch
+              </li>
+            ))}
           </ul>
           {/*only shown on max-md*/}
           <Carousel
             className="text-white h-[50px] hidden max-md:block"
             indicators={false}
             slide={false}
-            onSlideChange={(index) => setBranchByCarousel(index)}
+            aria-current={currentIndex} // Explicitly set the current index
             leftControl={
-              <span>
+              <span
+                onClick={() =>
+                  setBranchByIndex(
+                    (currentIndex - 1 + branches.length) % branches.length
+                  )
+                }
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -148,7 +130,11 @@ function ContactUs() {
               </span>
             }
             rightControl={
-              <span>
+              <span
+                onClick={() =>
+                  setBranchByIndex((currentIndex + 1) % branches.length)
+                }
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -170,7 +156,7 @@ function ContactUs() {
                 {branch}
               </div>
             ))}
-          </Carousel>{" "}
+          </Carousel>
         </div>
         <div className="flex h-full max-md:flex-col-reverse max-md:gap-12">
           {/*details*/}
