@@ -14,16 +14,6 @@ function ContactUs() {
     setBranch(branches[index]);
   };
 
-  const handleLeftControl = () => { // for branch carousel
-    const newIndex = (currentIndex - 1 + branches.length) % branches.length;
-    setBranchByCarousel(newIndex);
-  };
-
-  const handleRightControl = () => { // for branch carousel
-    const newIndex = (currentIndex + 1) % branches.length;
-    setBranchByCarousel(newIndex);
-  };
-
   return (
     <div>
       <AnimatedWrapper>
@@ -144,8 +134,9 @@ function ContactUs() {
             className="text-white h-[50px] hidden max-md:block"
             indicators={false}
             slide={false}
+            onSlideChange={(index) => setBranchByCarousel(index)}
             leftControl={
-              <span onClick={handleLeftControl}>
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -157,7 +148,7 @@ function ContactUs() {
               </span>
             }
             rightControl={
-              <span onClick={handleRightControl}>
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
