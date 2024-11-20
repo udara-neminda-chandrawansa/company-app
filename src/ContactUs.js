@@ -1,10 +1,28 @@
 import banner from "./images/ContactUs/banner.png";
 import { useState } from "react";
+import { Carousel } from "flowbite-react";
 import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 import TextTypingAnimation from "./components/TextTypingAnimation";
 
 function ContactUs() {
   const [selectedBranch, setBranch] = useState("Gampaha");
+  const branches = ["Gampaha", "Colombo", "Anuradhapura", "Kandy"]; // for branch carousel
+  const [currentIndex, setCurrentIndex] = useState(0); // for branch carousel
+
+  const setBranchByCarousel = (index) => { // for branch carousel
+    setCurrentIndex(index);
+    setBranch(branches[index]);
+  };
+
+  const handleLeftControl = () => { // for branch carousel
+    const newIndex = (currentIndex - 1 + branches.length) % branches.length;
+    setBranchByCarousel(newIndex);
+  };
+
+  const handleRightControl = () => { // for branch carousel
+    const newIndex = (currentIndex + 1) % branches.length;
+    setBranchByCarousel(newIndex);
+  };
 
   return (
     <div>
@@ -13,10 +31,10 @@ function ContactUs() {
           className="h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
           style={{ backgroundImage: `url(${banner})` }}
         >
-          <div className="bg-[#006E8AB2] h-2/3 flex">
-            <div className="flex flex-col w-1/2 text-start text-white p-12">
+          <div className="bg-[#006E8AB2] max-md:bg-[#408DA1B5] h-2/3 flex max-md:flex-col max-md:h-full">
+            <div className="flex flex-col w-1/2 text-start text-white p-12 max-md:pt-24 max-sm:px-6 max-md:w-full">
               <h1 className="font-light">Contact Us</h1>
-              <p className="text-2xl font-light" style={{ lineHeight: "50px" }}>
+              <p className="text-2xl max-lg:text-xl max-sm:text-base font-light">
                 Reach out to Silicon Radon Networks for any inquiries about our
                 IT solutions, network services, or support needs. Our team is
                 ready to assist you with expert advice and tailored solutions to
@@ -24,8 +42,8 @@ function ContactUs() {
                 filling out the form below – we look forward to connecting!
               </p>
             </div>
-            <div className="w-1/2 p-12">
-              <div className="bg-[#FFFFFF66] h-full w-full rounded-md p-6 flex flex-col gap-3">
+            <div className="w-1/2 p-12 max-md:w-full max-sm:p-0 max-md:h-full">
+              <div className="bg-[#FFFFFF66] max-md:bg-transparent h-full w-full rounded-md p-6 flex flex-col gap-3">
                 <div className="relative z-0">
                   <input
                     type="text"
@@ -62,7 +80,7 @@ function ContactUs() {
                 <span className="w-full flex justify-end">
                   <button
                     type="button"
-                    className="w-fit text-black bg-white hover:bg-black focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center gap-6"
+                    className="w-fit max-sm:w-full max-sm:justify-center text-black bg-white hover:bg-black focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center gap-6"
                   >
                     Send
                     <svg
@@ -80,9 +98,10 @@ function ContactUs() {
           </div>
         </div>
       </AnimatedWrapper>
-      <div className="h-[100vh] p-12 gap-12 flex flex-col">
+      <div className="h-[100vh] p-12 gap-12 flex flex-col max-md:p-6 max-md:gap-6">
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-full flex items-center rounded-lg">
-          <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:text-xs">
+          {/*only shown on md*/}
+          <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-lg:text-sm max-md:hidden">
             <li
               id="gam-b-clickable"
               className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
@@ -120,15 +139,57 @@ function ContactUs() {
               Kandy Branch
             </li>
           </ul>
-        </div>
-        <div className="flex h-full">
-          <div className="w-1/3 h-full">
-            <ul className="flex flex-col justify-between h-full m-0">
-              <li className="flex flex-col items-center gap-3 justify-center">
+          {/*only shown on max-md*/}
+          <Carousel
+            className="text-white h-[50px] hidden max-md:block"
+            indicators={false}
+            slide={false}
+            leftControl={
+              <span onClick={handleLeftControl}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-clock w-[40px] text-[#006E8A]"
+                  className="bi bi-arrow-left-circle-fill w-[32px]"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+              </span>
+            }
+            rightControl={
+              <span onClick={handleRightControl}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  className="bi bi-arrow-right-circle-fill w-[32px]"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg>
+              </span>
+            }
+          >
+            {branches.map((branch, index) => (
+              <div
+                key={branch}
+                className={
+                  index === currentIndex ? "text-white" : "text-gray-400"
+                }
+              >
+                {branch}
+              </div>
+            ))}
+          </Carousel>{" "}
+        </div>
+        <div className="flex h-full max-md:flex-col-reverse max-md:gap-12">
+          {/*details*/}
+          <div className="w-1/3 h-full max-md:w-full max-md:h-1/3">
+            <ul className="flex flex-col justify-between h-full m-0 max-lg:text-sm max-md:text-xs max-md:text-start">
+              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  className="bi bi-clock w-[40px] max-md:w-[20px] text-[#006E8A]"
                   viewBox="0 0 16 16"
                 >
                   <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
@@ -156,11 +217,11 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex flex-col items-center gap-3 justify-center">
+              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-telephone-fill w-[40px] text-[#006E8A]"
+                  className="bi bi-telephone-fill w-[40px] max-md:w-[20px] text-[#006E8A]"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -190,11 +251,11 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex flex-col items-center gap-3 justify-center transition-all delay-300">
+              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start transition-all delay-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-signpost-split-fill w-[40px] text-[#006E8A]"
+                  className="bi bi-signpost-split-fill w-[40px] max-md:w-[20px] text-[#006E8A]"
                   viewBox="0 0 16 16"
                 >
                   <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5z" />
@@ -222,11 +283,11 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex flex-col items-center gap-3 justify-center">
+              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-envelope w-[40px] text-[#006E8A]"
+                  className="bi bi-envelope w-[40px] max-md:w-[20px] text-[#006E8A]"
                   viewBox="0 0 16 16"
                 >
                   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
@@ -235,7 +296,8 @@ function ContactUs() {
               </li>
             </ul>
           </div>
-          <div className="w-2/3 h-full">
+          {/*map*/}
+          <div className="w-2/3 h-full max-md:w-full max-md:h-2/3">
             <div className="w-full h-full">
               <iframe
                 title="g-maps"
