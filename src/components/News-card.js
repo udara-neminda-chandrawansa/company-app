@@ -6,7 +6,7 @@ function NewsCard({ whichImg, cardText }) {
         className="h-[200px] object-cover"
         alt={`${whichImg} news`}
       ></img>
-      <p className="text-sm text-start p-3">{cardText}</p>
+      <p className="text-sm text-start p-3 m-0">{cardText}</p>
     </div>
   );
 }

@@ -5,6 +5,11 @@ import hardprac from "./images/NewsEvents/events/hardprac.png";
 import indconf from "./images/NewsEvents/events/indconf.png";
 import leadercamp from "./images/NewsEvents/events/leadercamp.png";
 import nethackathon from "./images/NewsEvents/events/nethackathon.png";
+import news1 from "./images/NewsEvents/news/news1.png";
+import news2 from "./images/NewsEvents/news/news2.png";
+import news3 from "./images/NewsEvents/news/news3.png";
+import news4 from "./images/NewsEvents/news/news4.png";
+import NewsCard2 from "./components/News-card2";
 
 import { useState } from "react";
 import { Modal } from "flowbite-react";
@@ -12,6 +17,7 @@ import { Modal } from "flowbite-react";
 function NewsEvents() {
   const [isEventsDisabled, setIsDisabled] = useState(false);
   const [selectedEventArrayNo, setSelectedEventArrayNo] = useState(0);
+  const [selectedNewsArrayNo, setSelectedNewsArrayNo] = useState(0);
 
   const events = [
     [
@@ -52,13 +58,37 @@ function NewsEvents() {
     ],
   ];
 
-  const [openModal, setOpenModal] = useState(false);
+  const news = [
+    [
+      news1,
+      "Intern Applications",
+      "Dear Team, Get ready to end the year with a bang! We are thrilled to invite you to Silicon Radon Networks’ 31st Night DJ Party to ring in the New Year together in style! Join us on December 31st at [Venue Location/Address] from 8:00 PM onwards, dressed in your Party Glam attire. Enjoy electrifying DJ performances.",
+    ],
+    [
+      news2,
+      "Intern Applications",
+      "Dear Team, Get ready to end the year with a bang! We are thrilled to invite you to Silicon Radon Networks’ 31st Night DJ Party to ring in the New Year together in style! Join us on December 31st at [Venue Location/Address] from 8:00 PM onwards, dressed in your Party Glam attire. Enjoy electrifying DJ performances.",
+    ],
+    [
+      news3,
+      "Intern Applications",
+      "Dear Team, Get ready to end the year with a bang! We are thrilled to invite you to Silicon Radon Networks’ 31st Night DJ Party to ring in the New Year together in style! Join us on December 31st at [Venue Location/Address] from 8:00 PM onwards, dressed in your Party Glam attire. Enjoy electrifying DJ performances.",
+    ],
+    [
+      news4,
+      "Intern Applications",
+      "Dear Team, Get ready to end the year with a bang! We are thrilled to invite you to Silicon Radon Networks’ 31st Night DJ Party to ring in the New Year together in style! Join us on December 31st at [Venue Location/Address] from 8:00 PM onwards, dressed in your Party Glam attire. Enjoy electrifying DJ performances.",
+    ],
+  ];
+
+  const [openModal1, setOpenModal1] = useState(false);
+  const [openModal2, setOpenModal2] = useState(false);
 
   return (
     <div className="flex flex-col h-[100vh] tiro-bangla">
       {/*banner*/}
       <div
-        className="h-[300px] bg-no-repeat bg-cover bg-center flex justify-center items-center"
+        className="min-h-[300px] bg-no-repeat bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h1 className="uppercase text-5xl text-start text-white w-full px-12 m-0">
@@ -102,7 +132,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${djnight})` }}
             onClick={() => {
               setSelectedEventArrayNo(0);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -117,7 +147,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${indconf})` }}
             onClick={() => {
               setSelectedEventArrayNo(1);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -134,7 +164,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${nethackathon})` }}
             onClick={() => {
               setSelectedEventArrayNo(2);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -149,7 +179,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${hardprac})` }}
             onClick={() => {
               setSelectedEventArrayNo(3);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -166,7 +196,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${awardcerem})` }}
             onClick={() => {
               setSelectedEventArrayNo(4);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -181,7 +211,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${leadercamp})` }}
             onClick={() => {
               setSelectedEventArrayNo(5);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -205,7 +235,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${djnight})` }}
             onClick={() => {
               setSelectedEventArrayNo(0);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -220,7 +250,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${indconf})` }}
             onClick={() => {
               setSelectedEventArrayNo(1);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -235,7 +265,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${nethackathon})` }}
             onClick={() => {
               setSelectedEventArrayNo(2);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -252,7 +282,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${hardprac})` }}
             onClick={() => {
               setSelectedEventArrayNo(3);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -267,7 +297,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${awardcerem})` }}
             onClick={() => {
               setSelectedEventArrayNo(4);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -282,7 +312,7 @@ function NewsEvents() {
             style={{ backgroundImage: `url(${leadercamp})` }}
             onClick={() => {
               setSelectedEventArrayNo(5);
-              setOpenModal(true);
+              setOpenModal1(true);
             }}
           >
             <p className="text-xl m-0 min-h-10 content-center w-fit max-md:text-base">
@@ -296,13 +326,47 @@ function NewsEvents() {
       </div>
       {/*news secton*/}
       <div
-        className={`flex-grow gap-1 ${isEventsDisabled ? "flex" : "hidden"}`}
+        className={`flex-grow max-md:h-fit max-md:overflow-scroll justify-center ${
+          isEventsDisabled ? "flex" : "hidden"
+        }`}
       >
-        <h1>text 1</h1>
-        <h1>text 2</h1>
+        <div className="w-5/6 h-fit flex justify-center gap-3 max-md:flex-col">
+          <NewsCard2
+            whichImg={news1}
+            cardText={"Intern Applications 2025"}
+            onClick={() => {
+              setSelectedNewsArrayNo(0);
+              setOpenModal2(true);
+            }}
+          ></NewsCard2>
+          <NewsCard2
+            whichImg={news2}
+            cardText={"Intern Applications 2025"}
+            onClick={() => {
+              setSelectedNewsArrayNo(1);
+              setOpenModal2(true);
+            }}
+          ></NewsCard2>
+          <NewsCard2
+            whichImg={news3}
+            cardText={"Intern Applications 2025"}
+            onClick={() => {
+              setSelectedNewsArrayNo(2);
+              setOpenModal2(true);
+            }}
+          ></NewsCard2>
+          <NewsCard2
+            whichImg={news4}
+            cardText={"Intern Applications 2025"}
+            onClick={() => {
+              setSelectedNewsArrayNo(3);
+              setOpenModal2(true);
+            }}
+          ></NewsCard2>
+        </div>
       </div>
       {/*events modal*/}
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+      <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
         <Modal.Header className="h-fit p-1"></Modal.Header>
         <Modal.Body className="p-0">
           <div className="">
@@ -322,6 +386,28 @@ function NewsEvents() {
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-6 m-0">
               {events[selectedEventArrayNo][3]}
             </p>
+          </div>
+        </Modal.Body>
+      </Modal>
+      {/*news modal*/}
+      <Modal show={openModal2} onClose={() => setOpenModal2(false)}>
+        <Modal.Header className="h-fit p-1"></Modal.Header>
+        <Modal.Body className="p-0">
+          <div className="">
+            <div
+              className="h-[300px] bg-no-repeat bg-cover bg-center flex items-end gap-3 pl-3 text-white tiro-bangla"
+              style={{
+                backgroundImage: `url(${news[selectedNewsArrayNo][0]})`,
+              }}
+            ></div>
+            <div className="p-3 flex flex-col gap-3">
+              <p className="text-xl tiro-bangla m-0 min-h-10 content-center w-fit max-md:text-base">
+                {news[selectedNewsArrayNo][1]}
+              </p>
+              <p className="text-sm m-0 min-h-10 content-center w-fit max-md:text-xs">
+                {news[selectedNewsArrayNo][2]}
+              </p>
+            </div>
           </div>
         </Modal.Body>
       </Modal>
