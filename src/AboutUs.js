@@ -43,17 +43,15 @@ function AboutUs() {
         <AnimatedWrapper>
           <div className="w-full flex text-white text-start px-12">
             <h1 className="max-md:hidden">
-              <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              <span className="urbanist max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
                 “
               </span>
             </h1>
             <h1 className="max-md:text-center">
-              <span className="hidden max-md:inline urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              <span className="hidden max-md:inline urbanist max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
                 “
               </span>
-              <span
-                className="tiro-tamil max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl max-[500px]:text-lg max-[450px]:text-base max-[400px]:text-sm line-height-70 max-md:line-height-40"
-              >
+              <span className="tiro-tamil max-md:text-2xl max-lg:text-3xl max-xl:text-5xl max-[500px]:text-lg line-height-70 max-md:line-height-40">
                 At Silicon Radon Networks, we are dedicated to empowering
                 businesses with cutting-edge IT solutions tailored to the
                 demands of the modern digital era. Founded with a vision to
@@ -61,7 +59,7 @@ function AboutUs() {
                 partner for companies seeking reliable and scalable technology
                 solutions.
               </span>
-              <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              <span className="urbanist max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
                 ”
               </span>
             </h1>
@@ -74,7 +72,7 @@ function AboutUs() {
           <h1 className="poltawski-nowy w-full text-center text-4xl text-[#022E39] max-md:text-3xl">
             Our Mission
           </h1>
-          <p className="text-3xl max-md:text-2xl max-sm:text-xl font-light px-24 max-md:px-12">
+          <p className="text-3xl max-md:text-2xl max-sm:text-lg font-light px-24 max-md:px-12">
             Our mission is to deliver high-performing IT infrastructure, network
             security, and managed services that enhance productivity, streamline
             operations, and secure data for organizations worldwide. We take
@@ -318,17 +316,19 @@ function AboutUs() {
                 </h1>
               </div>
               <div className="w-full px-12">
-                <ul className="flex flex-col m-0 max-md:pb-6 text-start gap-3">
+                <ul className="flex flex-col m-0 max-md:pb-6 text-start gap-3 max-md:text-sm">
                   <li className="flex items-center gap-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      className="bi bi-clock w-[16px]"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                    </svg>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        className="bi bi-clock w-[16px]"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                      </svg>
+                    </div>
                     {selectedBranch === "Gampaha" ? (
                       <TextTypingAnimation
                         key={selectedBranch}
@@ -352,17 +352,19 @@ function AboutUs() {
                     )}
                   </li>
                   <li className="flex items-center gap-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      className="bi bi-telephone-fill w-[16px]"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                      />
-                    </svg>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        className="bi bi-telephone-fill w-[16px]"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                        />
+                      </svg>
+                    </div>
                     {selectedBranch === "Gampaha" ? (
                       <TextTypingAnimation
                         key={selectedBranch}
@@ -386,15 +388,16 @@ function AboutUs() {
                     )}
                   </li>
                   <li className="flex items-center gap-3 transition-all delay-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      className="bi bi-signpost-split-fill w-[16px]"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5z" />
-                    </svg>
-
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        className="bi bi-signpost-split-fill w-[16px]"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5z" />
+                      </svg>
+                    </div>
                     {selectedBranch === "Gampaha" ? (
                       <TextTypingAnimation
                         key={selectedBranch}
@@ -418,14 +421,16 @@ function AboutUs() {
                     )}
                   </li>
                   <li className="flex items-center gap-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      className="bi bi-geo-alt-fill w-[16px]"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                    </svg>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        className="bi bi-geo-alt-fill w-[16px]"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                      </svg>
+                    </div>
                     <a
                       href={
                         selectedBranch === "Gampaha"

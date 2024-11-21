@@ -6,6 +6,7 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Footer from "./components/Footer";
 import NewsEvents from "./News&Events.js";
+import Partners from "./Partners.js";
 import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
       <Route path="/contact" component={ContactUs} />
       {/*News & Events Page*/}
       <Route path="/news" component={NewsEvents} />
+      {/*Partners Page*/}
+      <Route path="/partners" component={Partners} />
       {/*footer*/}
       <AnimatedWrapper>
         <Footer></Footer>

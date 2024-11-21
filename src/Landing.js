@@ -97,11 +97,11 @@ function Landing() {
         <AnimatedWrapper>
           {/*text content*/}
           <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
-            <h1 className="text-6xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
+            <h1 className="text-5xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
               Nothing Is More Attractive Than Quality
             </h1>
             <p
-              className={`text-lg font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
+              className={`text-base font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
                 isTransitioning
                   ? "opacity-0 translate-y-5"
                   : "opacity-100 translate-y-0"

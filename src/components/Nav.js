@@ -9,7 +9,7 @@ function Nav() {
     <div className="h-[50px] z-50 max-[940px]:h-full">
       {/*normal nav*/}
       <div className="flex justify-between w-full px-10 h-[50px] max-[940px]:hidden">
-        <ul className="flex w-1/3 justify-evenly items-center h-full">
+        <ul className="flex w-1/3 justify-start items-center h-full">
           <Link href="/" className="text-white no-underline">
             <li className="flex items-center justify-center dark:text-black text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
               Home
@@ -40,7 +40,7 @@ function Nav() {
             </li>
           </Link>
         </ul>
-        <ul className="flex w-1/3 justify-evenly items-center h-full">
+        <ul className="flex w-1/3 justify-end items-center h-full">
           <Link
             href="/contact"
             className="text-white no-underline"
