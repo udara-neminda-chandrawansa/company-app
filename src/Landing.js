@@ -97,11 +97,11 @@ function Landing() {
         <AnimatedWrapper>
           {/*text content*/}
           <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
-            <h1 className="text-5xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
+            <h1 className="text-6xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
               Nothing Is More Attractive Than Quality
             </h1>
             <p
-              className={`text-base font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
+              className={`text-lg font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
                 isTransitioning
                   ? "opacity-0 translate-y-5"
                   : "opacity-100 translate-y-0"
@@ -148,7 +148,7 @@ function Landing() {
           <h1 className="pt-serif-caption-regular text-4xl text-green-950 max-md:text-xl">
             Welcome To Silicon Radon Networks
           </h1>
-          <p className="text-sm max-md:text-xs">
+          <p className="text-base max-md:text-sm">
             Welcome to Silicon Radon Networks (Pvt) Ltd where innovation meets
             excellence in IT solutions. At Silicon Radon Networks, we specialize
             in delivering cutting-edge technology services that drive growth,
@@ -157,7 +157,7 @@ function Landing() {
             networking, cybersecurity, and IT infrastructure solutions, designed
             to meet the unique needs of our clients.
           </p>
-          <p className="text-sm max-md:text-xs">
+          <p className="text-base max-md:text-sm">
             With a focus on reliability, scalability, and customer satisfaction,
             we bring you the best in technology-driven solutions to keep you
             ahead of the curve. Whether you're a small business seeking to
@@ -165,7 +165,7 @@ function Landing() {
             future, Silicon Radon Networks is your trusted partner in achieving
             success
           </p>
-          <p className="text-sm max-md:text-xs">
+          <p className="text-base max-md:text-sm">
             Welcome to a new level of innovation. Welcome to Silicon Radon
             Networks (Pvt) Ltd.
           </p>
@@ -276,7 +276,7 @@ function Landing() {
           <h1 className="relative z-10 text-4xl text-white underline underline-offset-8 max-md:text-xl">
             Our Clients
           </h1>
-          <p className="text-sm text-white font-thin">
+          <p className="text-sm max-md:text-xs text-white">
             Silicon Radon Networks offers premier Web Development services
             designed to elevate your online presence. Our team of expert
             developers crafts responsive, dynamic, and secure websites tailored

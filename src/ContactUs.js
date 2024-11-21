@@ -1,5 +1,5 @@
 import banner from "./images/ContactUs/banner.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel } from "flowbite-react";
 import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 import TextTypingAnimation from "./components/TextTypingAnimation";
@@ -15,6 +15,16 @@ function ContactUs() {
     setBranch(branches[index]);
   };
 
+  useEffect(() => {
+    // Add the 'dark' class to the root element on page load
+    document.documentElement.classList.add("dark");
+
+    // Cleanup function (optional, for any dark mode-specific cleanup)
+    return () => {
+      document.documentElement.classList.remove("dark");
+    };
+  }, []);
+
   return (
     <div>
       <AnimatedWrapper>
@@ -23,9 +33,9 @@ function ContactUs() {
           style={{ backgroundImage: `url(${banner})` }}
         >
           <div className="bg-[#006E8AB2] max-md:bg-[#408DA1B5] h-2/3 flex max-md:flex-col max-md:h-full">
-            <div className="flex flex-col w-1/2 text-start text-white p-12 max-md:pt-24 max-sm:px-6 max-md:w-full">
+            <div className="flex flex-col w-1/2 text-start text-white p-12 max-md:pt-24 max-sm:px-6 max-md:w-full max-md:py-0">
               <h1 className="font-light">Contact Us</h1>
-              <p className="text-2xl max-lg:text-xl max-sm:text-base font-light">
+              <p className="text-2xl max-lg:text-xl max-sm:text-base font-light line-height-40">
                 Reach out to Silicon Radon Networks for any inquiries about our
                 IT solutions, network services, or support needs. Our team is
                 ready to assist you with expert advice and tailored solutions to
@@ -65,7 +75,7 @@ function ContactUs() {
                 </div>
                 <textarea
                   id="message"
-                  className="flex flex-grow p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black "
+                  className="flex flex-grow p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black"
                   placeholder="Enter Your Message"
                 ></textarea>
                 <span className="w-full flex justify-end">

@@ -17,8 +17,8 @@ function ClientCard({ whichImg, cardTitle, cardText, cardAuthor }) {
         alt={`${whichImg} client`}
       />
       <h1 className="text-xl text-[#006E8A]">{cardTitle}</h1>
-      <p className="text-xs tracking-widest px-3">{cardText}</p>
-      <p className="text-xs flex items-center justify-center m-0 p-0 w-full h-[30px] bg-[#006E8A] text-center text-white">{cardAuthor}</p>
+      <p className="text-sm max-md:text-xs tracking-widest px-3">{cardText}</p>
+      <p className="text-sm max-md:text-xs flex items-center justify-center m-0 p-0 w-full h-[30px] bg-[#006E8A] text-center text-white">{cardAuthor}</p>
     </div>
   );
 }

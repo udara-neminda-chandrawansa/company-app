@@ -42,13 +42,18 @@ function AboutUs() {
       >
         <AnimatedWrapper>
           <div className="w-full flex text-white text-start px-12">
-            <h1>
+            <h1 className="max-md:hidden">
               <span className="urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
                 “
               </span>
             </h1>
             <h1 className="max-md:text-center">
-              <span className="tiro-tamil max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+              <span className="hidden max-md:inline urbanist max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
+                “
+              </span>
+              <span
+                className="tiro-tamil max-sm:text-xl max-md:text-2xl max-lg:text-3xl max-xl:text-5xl max-[500px]:text-lg max-[450px]:text-base max-[400px]:text-sm line-height-70 max-md:line-height-40"
+              >
                 At Silicon Radon Networks, we are dedicated to empowering
                 businesses with cutting-edge IT solutions tailored to the
                 demands of the modern digital era. Founded with a vision to
@@ -63,7 +68,6 @@ function AboutUs() {
           </div>
         </AnimatedWrapper>
       </div>
-
       {/*Mission*/}
       <div className="h-fit py-12 gap-12 flex items-center flex-col">
         <AnimatedWrapper>
@@ -93,14 +97,14 @@ function AboutUs() {
           </h1>
           <img
             src={ceo}
-            className="max-md:max-h-[400px] object-contain"
+            className="max-h-[400px] object-contain"
             alt="ceo"
           ></img>
-          <div className="flex flex-col gap-6 max-md:items-center">
+          <div className="flex flex-col justify-between gap-6 max-[900px]:justify-start max-md:items-center">
             <h1 className="tiro-bangla text-5xl p-0 m-0 max-md:hidden">
               C.E.O
             </h1>
-            <p className="text-xl font-light text-justify p-0 m-0 max-md:text-center">
+            <p className="text-2xl max-lg:text-xl max-[835px]:text-base font-light text-justify p-0 m-0 max-md:text-center">
               At Silicon Radon Networks, we believe that your success is our
               success. By leveraging our expertise, experience, and
               forward-thinking approach, we ensure that every project we
@@ -206,37 +210,37 @@ function AboutUs() {
           <div className="flex flex-col gap-6 px-20 w-full max-md:hidden">
             <div className="flex gap-10 justify-center">
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${depositPhotos})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${slair})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${slcus})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${examplecus})` }}
               ></div>
             </div>
             <div className="flex gap-10 justify-center">
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${creative})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${vw})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${adcreative})` }}
               ></div>
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-cover"
+                className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${colorful})` }}
               ></div>
             </div>
@@ -548,7 +552,7 @@ function AboutUs() {
             </Carousel>
           </div>
           {/* Static grid for larger screens */}
-          <div className="w-full max-md:hidden flex justify-evenly">
+          <div className="w-full max-md:hidden flex justify-evenly gap-1">
             <AwardCard
               whichImg="award1"
               cardText="The Best Software Company In SRI LANKA -2024"

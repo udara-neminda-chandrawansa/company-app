@@ -66,3 +66,11 @@ code {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
+
+.line-height-70 {
+  line-height: 80px;
+}
+
+.line-height-40 {
+  line-height: 60px;
+}
