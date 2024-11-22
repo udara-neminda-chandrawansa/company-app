@@ -28,9 +28,6 @@ function Footer() {
                   <Link className="no-underline text-[#023744]" href="/">Home</Link>
                 </li>
                 <li className="text-start cursor-pointer">
-                  <Link className="no-underline text-[#023744]" href="/careers">Careers</Link>
-                </li>
-                <li className="text-start cursor-pointer">
                   <Link className="no-underline text-[#023744]" href="/products">Products</Link>
                 </li>
                 <li className="text-start cursor-pointer">
@@ -41,7 +38,7 @@ function Footer() {
             <div className="w-1/2">
               <ul className="flex flex-col gap-6">
                 <li className="text-start cursor-pointer">
-                  <Link className="no-underline text-[#023744]" href="/company">Company</Link>
+                  <Link className="no-underline text-[#023744]" href="/aboutus">About Us</Link>
                 </li>
                 <li className="text-start cursor-pointer">
                   <Link className="no-underline text-[#023744]" href="/news">News & Events</Link>

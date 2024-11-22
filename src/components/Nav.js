@@ -16,14 +16,6 @@ function Nav() {
             </li>
           </Link>
           <Link
-            href="/company"
-            className="text-white no-underline"
-          >
-            <li className="flex items-center justify-center dark:text-black text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-              Company
-            </li>
-          </Link>
-          <Link
             href="/products"
             className="text-white no-underline"
           >
@@ -97,14 +89,6 @@ function Nav() {
                   onClick={() => setOpenModal(false)}
                 >
                   Home
-                </li>
-              </Link>
-              <Link href="/company" className="text-[#006E8A] no-underline">
-                <li
-                  className="flex items-center justify-center text-nowrap px-3 cursor-pointer"
-                  onClick={() => setOpenModal(false)}
-                >
-                  Company
                 </li>
               </Link>
               <Link href="/products" className="text-[#006E8A] no-underline">
