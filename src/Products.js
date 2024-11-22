@@ -145,7 +145,7 @@ function Products() {
     <div className="">
       {/*banner*/}
       <div
-        className="h-[40vh] max-lg:h-[50vh] bg-no-repeat bg-cover flex flex-col justify-center text-start text-white"
+        className="h-[40dvh] max-lg:h-[50dvh] bg-no-repeat bg-cover flex flex-col justify-center text-start text-white"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h1 className="font-thin pl-12 max-md:pl-0 tiro-bangla text-5xl max-xl:text-4xl max-md:text-3xl max-sm:text-2xl max-md:text-center">
@@ -163,7 +163,7 @@ function Products() {
       </div>
       {/*product cards*/}
       <div
-        className={`h-[60vh] max-lg:h-[50vh] flex justify-center items-center ${
+        className={`h-[60dvh] max-lg:h-[50dvh] flex justify-center items-center ${
           productPaneVisible === true ? "hidden" : "flex"
         }`}
       >
@@ -554,7 +554,7 @@ function Products() {
               {/*client feedback list - for max-md*/}
               <div>
                 <Carousel
-                  className="max-md:block h-[70vh] hidden"
+                  className="max-md:block h-[70dvh] hidden"
                   leftControl={<p className="text-transparent"></p>}
                   rightControl={<p className="text-transparent"></p>}
                   indicators={false}

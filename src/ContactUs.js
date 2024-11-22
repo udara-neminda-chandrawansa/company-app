@@ -29,7 +29,7 @@ function ContactUs() {
     <div>
       <AnimatedWrapper>
         <div
-          className="h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
+          className="h-dvh bg-no-repeat bg-cover flex flex-col justify-center"
           style={{ backgroundImage: `url(${banner})` }}
         >
           <div className="bg-[#006E8AB2] max-md:bg-[#408DA1B5] h-2/3 flex max-md:flex-col max-md:h-full">
@@ -99,7 +99,7 @@ function ContactUs() {
           </div>
         </div>
       </AnimatedWrapper>
-      <div className="h-[100vh] p-12 gap-12 flex flex-col max-md:p-6 max-md:gap-6">
+      <div className="h-dvh p-12 gap-12 flex flex-col max-md:p-6 max-md:gap-6">
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-full flex items-center rounded-lg">
           {/*only shown on md*/}
           <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-lg:text-sm max-md:hidden">

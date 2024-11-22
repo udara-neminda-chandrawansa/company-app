@@ -10,7 +10,7 @@ import colorful from "./images/AboutUs/partners/colorful.png";
 
 function Partners() {
   return (
-    <div className="h-[100vh] max-md:h-[150vh] max-sm:h-[150vh]">
+    <div className="h-dvh max-md:h-[150dvh] max-sm:h-[150dvh]">
       <div
         className="h-2/5 max-lg:h-1/2 max-md:h-1/3 max-sm:h-1/3 bg-no-repeat bg-cover flex flex-col justify-center text-start text-white"
         style={{ backgroundImage: `url(${banner})` }}
@@ -28,7 +28,7 @@ function Partners() {
           and drive your business forward with our custom web solutions.
         </p>
       </div>
-      <div className="hidden max-md:h-[50vh] max-md:flex max-sm:h-1/3 justify-center items-center h-1/6">
+      <div className="hidden max-md:h-[50dvh] max-md:flex max-sm:h-1/3 justify-center items-center h-1/6">
         <p className="px-12 max-md:px-6 max-sm:px-3 text-sm m-0 flex-grow">
           Silicon Radon Networks offers premier Web Development services
           designed to elevate your online presence. Our team of expert
@@ -39,7 +39,7 @@ function Partners() {
           and drive your business forward with our custom web solutions.
         </p>
       </div>
-      <div className="h-3/5 max-lg:h-1/2 max-md:h-[50vh] max-sm:h-1/3 max-sm:justify-center max-sm:items-center">
+      <div className="h-3/5 max-lg:h-1/2 max-md:h-[50dvh] max-sm:h-1/3 max-sm:justify-center max-sm:items-center">
         {/* Static grid for larger screens */}
         <div className="h-full flex flex-col justify-center items-center w-full max-md:hidden">
           <div className="flex gap-5 justify-center items-center h-full w-full">

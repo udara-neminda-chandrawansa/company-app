@@ -85,10 +85,10 @@ function NewsEvents() {
   const [openModal2, setOpenModal2] = useState(false);
 
   return (
-    <div className="flex flex-col h-[100vh] tiro-bangla">
+    <div className="flex flex-col h-dvh tiro-bangla">
       {/*banner*/}
       <div
-        className="min-h-[300px] bg-no-repeat bg-cover bg-center flex justify-center items-center"
+        className="min-h-[30dvh] bg-no-repeat bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h1 className="uppercase text-5xl text-start text-white w-full px-12 m-0">

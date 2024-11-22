@@ -37,7 +37,7 @@ function AboutUs() {
     <>
       {/*Banner*/}
       <div
-        className="bg-cover h-[100vh] flex flex-col justify-center items-center"
+        className="bg-cover h-dvh flex flex-col justify-center items-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <AnimatedWrapper>
