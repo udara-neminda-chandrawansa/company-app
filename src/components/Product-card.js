@@ -3,7 +3,7 @@ function ProductCard({ whichImg, cardTitle, cardText, onClick }) {
     <div className="flex flex-col h-full w-[400px] max-[400px]:h-2/3 max-[400px]:bg-white">
       <img
         src={whichImg}
-        className="h-1/2 object-cover"
+        className="h-1/2 object-cover max-sm:h-[100px] max-sm:object-contain"
         alt={`${whichImg} news`}
       ></img>
       <h5 className="sm:text-start font-light px-3 py-1 m-0 text-[#006E8A]">{cardTitle}</h5>
