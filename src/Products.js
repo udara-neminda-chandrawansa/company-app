@@ -1,8 +1,10 @@
+import { Button, Label, Modal, Textarea, TextInput } from "flowbite-react";
 import { Carousel } from "flowbite-react";
 import { CCarousel } from "@coreui/react";
 import { CCarouselItem } from "@coreui/react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ProductCard from "./components/Product-card";
+import StarRating from "./components/StarRating";
 import banner from "./images/Products/banner.png";
 import pos from "./images/Products/cards/pos.png";
 import lms from "./images/Products/cards/lms.png";
@@ -12,6 +14,9 @@ import creative from "./images/AboutUs/partners/creative.png";
 import vw from "./images/AboutUs/partners/vw.png";
 import adcreative from "./images/AboutUs/partners/adcreative.png";
 import prodPaneBanner_1 from "./images/Products/product-pane/banner-1.png";
+import prodPaneBanner_2 from "./images/Products/product-pane/banner-2.png";
+import prodPaneBanner_3 from "./images/Products/product-pane/banner-3.png";
+import camera_icon from "./images/Products/product-pane/camera-icon.png";
 import feedbackBanner from "./images/Products/product-pane/feedback-side-banner.png";
 
 function Products() {
@@ -23,7 +28,7 @@ function Products() {
     [
       pos,
       "POS System",
-      "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne , touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor and a barcode scanner.",
+      "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and receipt printers) with software to process sales, manage payments, and track customer purchases. Modern POS systems go beyond simple sales processing, offering inventory tracking, employee management, customer relationship management (CRM), and detailed analytics for business growth. POS systems streamline checkout processes, reducing human error and improving customer satisfaction. Integrated with payment gateways, they enable seamless handling of multiple payment methods, such as cash, credit cards, and digital wallets. By analyzing sales data, POS systems help businesses identify trends, track product performance, and optimize stock levels. Cloud-based POS solutions further enhance accessibility by enabling real-time monitoring and reporting across multiple locations. Whether for small businesses or large enterprises, a POS system is an essential tool for efficient operations and informed decision-making.",
       prodPaneBanner_1,
       [
         [
@@ -55,8 +60,8 @@ function Products() {
     [
       lms,
       "LMS System",
-      "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne , touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor and a barcode scanner.",
-      prodPaneBanner_1,
+      "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee training programs. These systems centralize course materials, such as videos, documents, quizzes, and discussion forums, enabling learners to access content anytime and from anywhere. Administrators can track progress, measure engagement, and evaluate the effectiveness of courses using built-in analytics and reporting tools. For educators and trainers, LMS platforms simplify course creation, customization, and scheduling, often supporting gamification, certification, and social learning features. Learners benefit from interactive and self-paced modules, fostering greater retention and motivation. Cloud-based LMS solutions also integrate with other tools, such as video conferencing and collaboration platforms, enhancing the overall learning experience. By bridging gaps between learners and instructors, LMS systems promote accessibility, scalability, and lifelong learning.",
+      prodPaneBanner_2,
       [
         [
           adcreative,
@@ -87,8 +92,8 @@ function Products() {
     [
       inv,
       "Inventory Control System",
-      "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanne , touchscreen monitor, barcode scanne A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor, barcode scanneA Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet), touchscreen monitor and a barcode scanner.",
-      prodPaneBanner_1,
+      "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking or shortages that could disrupt operations or customer satisfaction. IMS tools automate processes such as inventory tracking, order management, restocking alerts, and reporting, improving efficiency across supply chains. Modern inventory systems integrate with barcode scanners, RFID technology, and point-of-sale systems, enabling real-time updates and streamlined inventory audits. For businesses with large-scale operations, advanced IMS platforms incorporate predictive analytics and demand forecasting to align inventory levels with market trends. Cloud-based solutions offer centralized management across multiple locations, allowing businesses to monitor stock status remotely. From small retailers to large warehouses, an Inventory Management System is indispensable for reducing costs, improving productivity, and maintaining customer satisfaction.",
+      prodPaneBanner_3,
       [
         [
           adcreative,
@@ -117,6 +122,24 @@ function Products() {
       ],
     ],
   ];
+
+  const feedbackEnd = useRef(null); // reference of 'feedback' right side div
+
+  const scrollDown = () => {
+    // scroll to end of the 'feedback-scrollable' div
+    document.getElementById("feedback-scrollable").scrollTo({
+      top: feedbackEnd.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  const [openModal, setOpenModal] = useState(false); // for toggling modal
+
+  const [rating, setRating] = useState(0); // number of stars given by user
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating); // Capture the rating from StarRating
+  };
 
   return (
     <div className="">
@@ -147,7 +170,7 @@ function Products() {
         {/*max-lg -> one card per slide*/}
         <CCarousel
           dark
-          className="hidden max-lg:flex w-full h-full justify-center items-center"
+          className="hidden max-lg:flex w-full justify-center items-center"
         >
           <CCarouselItem className="">
             <div className="h-full flex justify-center">
@@ -159,7 +182,7 @@ function Products() {
                   selectProduct(0);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
             </div>
@@ -174,7 +197,7 @@ function Products() {
                   selectProduct(1);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
             </div>
@@ -189,7 +212,7 @@ function Products() {
                   selectProduct(2);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking o..."
                 }
               ></ProductCard>
             </div>
@@ -211,7 +234,7 @@ function Products() {
                   selectProduct(0);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -223,7 +246,7 @@ function Products() {
                   selectProduct(1);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -235,7 +258,7 @@ function Products() {
                   selectProduct(2);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking o..."
                 }
               ></ProductCard>
             </div>
@@ -250,7 +273,7 @@ function Products() {
                   selectProduct(0);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -262,7 +285,7 @@ function Products() {
                   selectProduct(1);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -274,7 +297,7 @@ function Products() {
                   selectProduct(2);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking o..."
                 }
               ></ProductCard>
             </div>
@@ -289,7 +312,7 @@ function Products() {
                   selectProduct(0);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -301,7 +324,7 @@ function Products() {
                   selectProduct(1);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
               <div className="w-[2px] bg-black"></div>
@@ -313,7 +336,7 @@ function Products() {
                   selectProduct(2);
                 }}
                 cardText={
-                  "A Point of Sale (POS) system is a combination of hardware and software designed to facilitate sales transactions and manage business operations. It typically includes hardware components such as a POS terminal (computer or tablet)..."
+                  "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking o..."
                 }
               ></ProductCard>
             </div>
@@ -326,7 +349,7 @@ function Products() {
           productPaneVisible === true ? "flex" : "hidden"
         }`}
       >
-        {/*product title/text*/}
+        {/*product title, text*/}
         <div className="">
           <h5 className="flex justify-between items-center p-3 m-0 text-[#006E8A]">
             {products[selectedProduct][1]}
@@ -349,13 +372,13 @@ function Products() {
             {products[selectedProduct][2]}
           </p>
         </div>
-        {/*prod-pane-banner*/}
+        {/*prod-pane-banner (left side with thumbs up image)*/}
         <img
           className="object-top object-cover"
           src={products[selectedProduct][3]}
           alt="product-pane-banner"
         ></img>
-        {/*feedbacks*/}
+        {/*feedbacks (list with stars)*/}
         <div className="py-6 flex flex-col justify-center items-center h-[800px] max-md:h-fit">
           <div className="flex w-full h-full">
             <div
@@ -368,7 +391,10 @@ function Products() {
                 </h1>
               </span>
             </div>
-            <div className="w-4/5 h-full overflow-y-scroll no-scrollbar">
+            <div
+              id="feedback-scrollable"
+              className="w-4/5 h-full overflow-y-scroll no-scrollbar"
+            >
               <span className="absolute w-4/5 flex gap-3 pt-6 pl-6 max-sm:pl-3 max-sm:pt-3 max-[375px]:pl-1 bg-white">
                 <h1 className="uppercase z-10 text-[#006E8A] text-5xl max-lg:text-3xl max-sm:text-xl max-[425px]:text-lg m-0">
                   Feedback
@@ -500,138 +526,232 @@ function Products() {
                     {products[selectedProduct][4][3][3]}
                   </p>
                 </div>
+                <div className="sticky bottom-5 flex justify-evenly items-center">
+                  <button
+                    onClick={scrollDown}
+                    className="bg-white rounded-full border-2 border-black"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="bi bi-arrow-down-short h-[20px] w-[20px] text-black"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => setOpenModal(true)}
+                    className="bg-white border-2 border-black px-1 text-sm rounded-full"
+                  >
+                    Add your feedback
+                  </button>
+                </div>
               </div>
               {/*client feedback list - for max-md*/}
-              <Carousel className="max-md:block h-[100vh] hidden" leftControl={<p className="text-transparent"></p>} rightControl={<p className="text-transparent"></p>} indicators={false}>
-                <div className="pt-24 max-sm:pt-12">
-                  <span className="flex items-center h-full gap-3 px-3">
-                    <img
-                      className="w-[60px] max-md:w-[30px] aspect-square object-cover"
-                      src={products[selectedProduct][4][0][0]}
-                      alt="feedback-company"
-                    ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
-                      {products[selectedProduct][4][0][1]}
-                    </h5>
-                    <span className="flex gap-1">
-                      {Array.from(
-                        { length: products[selectedProduct][4][0][2] },
-                        (_, index) => (
-                          <svg
-                            key={index}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#faca15"
-                            className="bi bi-star-fill w-[16px]"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                          </svg>
-                        )
-                      )}
+              <div>
+                <Carousel
+                  className="max-md:block h-[70vh] hidden"
+                  leftControl={<p className="text-transparent"></p>}
+                  rightControl={<p className="text-transparent"></p>}
+                  indicators={false}
+                >
+                  <div className="pt-24 max-sm:pt-12">
+                    <span className="flex items-center h-full gap-3 px-3">
+                      <img
+                        className="w-[60px] max-md:w-[30px] aspect-square object-cover"
+                        src={products[selectedProduct][4][0][0]}
+                        alt="feedback-company"
+                      ></img>
+                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                        {products[selectedProduct][4][0][1]}
+                      </h5>
+                      <span className="flex gap-1">
+                        {Array.from(
+                          { length: products[selectedProduct][4][0][2] },
+                          (_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#faca15"
+                              className="bi bi-star-fill w-[16px]"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                          )
+                        )}
+                      </span>
                     </span>
-                  </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
-                    {products[selectedProduct][4][0][3]}
-                  </p>
-                </div>
-                <div className="pt-24 max-sm:pt-12">
-                  <span className="flex items-center gap-3 px-3">
-                    <img
-                      className="w-[60px] max-md:w-[30px] aspect-square"
-                      src={products[selectedProduct][4][1][0]}
-                      alt="feedback-company"
-                    ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
-                      {products[selectedProduct][4][1][1]}
-                    </h5>
-                    <span className="flex gap-1">
-                      {Array.from(
-                        { length: products[selectedProduct][4][1][2] },
-                        (_, index) => (
-                          <svg
-                            key={index}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#faca15"
-                            className="bi bi-star-fill w-[16px]"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                          </svg>
-                        )
-                      )}
+                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                      {products[selectedProduct][4][0][3]}
+                    </p>
+                  </div>
+                  <div className="pt-24 max-sm:pt-12">
+                    <span className="flex items-center gap-3 px-3">
+                      <img
+                        className="w-[60px] max-md:w-[30px] aspect-square"
+                        src={products[selectedProduct][4][1][0]}
+                        alt="feedback-company"
+                      ></img>
+                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                        {products[selectedProduct][4][1][1]}
+                      </h5>
+                      <span className="flex gap-1">
+                        {Array.from(
+                          { length: products[selectedProduct][4][1][2] },
+                          (_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#faca15"
+                              className="bi bi-star-fill w-[16px]"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                          )
+                        )}
+                      </span>
                     </span>
-                  </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
-                    {products[selectedProduct][4][1][3]}
-                  </p>
-                </div>
-                <div className="pt-24 max-sm:pt-12">
-                  <span className="flex items-center gap-3 px-3">
-                    <img
-                      className="w-[60px] max-md:w-[30px] aspect-square"
-                      src={products[selectedProduct][4][2][0]}
-                      alt="feedback-company"
-                    ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
-                      {products[selectedProduct][4][2][1]}
-                    </h5>
-                    <span className="flex gap-1">
-                      {Array.from(
-                        { length: products[selectedProduct][4][2][2] },
-                        (_, index) => (
-                          <svg
-                            key={index}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#faca15"
-                            className="bi bi-star-fill w-[16px]"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                          </svg>
-                        )
-                      )}
+                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                      {products[selectedProduct][4][1][3]}
+                    </p>
+                  </div>
+                  <div className="pt-24 max-sm:pt-12">
+                    <span className="flex items-center gap-3 px-3">
+                      <img
+                        className="w-[60px] max-md:w-[30px] aspect-square"
+                        src={products[selectedProduct][4][2][0]}
+                        alt="feedback-company"
+                      ></img>
+                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                        {products[selectedProduct][4][2][1]}
+                      </h5>
+                      <span className="flex gap-1">
+                        {Array.from(
+                          { length: products[selectedProduct][4][2][2] },
+                          (_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#faca15"
+                              className="bi bi-star-fill w-[16px]"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                          )
+                        )}
+                      </span>
                     </span>
-                  </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
-                    {products[selectedProduct][4][2][3]}
-                  </p>
-                </div>
-                <div className="pt-24 max-sm:pt-12">
-                  <span className="flex items-center gap-3 px-3">
-                    <img
-                      className="w-[60px] max-md:w-[30px] aspect-square"
-                      src={products[selectedProduct][4][3][0]}
-                      alt="feedback-company"
-                    ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
-                      {products[selectedProduct][4][3][1]}
-                    </h5>
-                    <span className="flex gap-1">
-                      {Array.from(
-                        { length: products[selectedProduct][4][3][2] },
-                        (_, index) => (
-                          <svg
-                            key={index}
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#faca15"
-                            className="bi bi-star-fill w-[16px]"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                          </svg>
-                        )
-                      )}
+                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                      {products[selectedProduct][4][2][3]}
+                    </p>
+                  </div>
+                  <div className="pt-24 max-sm:pt-12">
+                    <span className="flex items-center gap-3 px-3">
+                      <img
+                        className="w-[60px] max-md:w-[30px] aspect-square"
+                        src={products[selectedProduct][4][3][0]}
+                        alt="feedback-company"
+                      ></img>
+                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                        {products[selectedProduct][4][3][1]}
+                      </h5>
+                      <span className="flex gap-1">
+                        {Array.from(
+                          { length: products[selectedProduct][4][3][2] },
+                          (_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="#faca15"
+                              className="bi bi-star-fill w-[16px]"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                          )
+                        )}
+                      </span>
                     </span>
-                  </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
-                    {products[selectedProduct][4][3][3]}
-                  </p>
-                </div>
-              </Carousel>
+                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                      {products[selectedProduct][4][3][3]}
+                    </p>
+                  </div>
+                </Carousel>
+                <button
+                  onClick={() => setOpenModal(true)}
+                  className="bg-white border-2 border-black px-1 text-sm rounded-full"
+                >
+                  Add your feedback
+                </button>
+              </div>
+              <span className="max-md:hidden h-0 m-0" ref={feedbackEnd}></span>
             </div>
           </div>
         </div>
       </div>
+      {/*modal for adding feedbacks*/}
+      <Modal
+        position="center"
+        show={openModal}
+        size="md"
+        popup
+        onClose={() => setOpenModal(false)}
+      >
+        <Modal.Header />
+        <Modal.Body>
+          <div className="space-y-6">
+            <div className="flex items-center gap-6">
+              <input
+                type="file"
+                className="hidden"
+                name="img-selecter"
+                id="img-selecter"
+              ></input>
+              <label
+                htmlFor="img-selecter"
+                className="cursor-pointer w-[50px] aspect-square rounded-full bg-[#006E8A17] flex justify-center items-center"
+              >
+                <img
+                  className="w-[32px] mb-1"
+                  src={camera_icon}
+                  alt="company-logo"
+                ></img>
+              </label>
+              <div className="block">
+                <Label htmlFor="img-selecter" value="Your company logo" />
+              </div>
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="name" value="Your company name" />
+              </div>
+              <TextInput id="name" type="name" required />
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="feedback" value="Your feedback" />
+              </div>
+              <Textarea rows={5} id="feedback" type="feedback" required />
+            </div>
+            <div>
+              <div className="flex items-center justify-end gap-2">
+                <StarRating onRatingChange={handleRatingChange} />
+                <p className="hidden">{rating}</p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center">
+              <Button>Submit</Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

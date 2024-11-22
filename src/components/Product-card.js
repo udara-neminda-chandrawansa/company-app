@@ -1,6 +1,6 @@
 function ProductCard({ whichImg, cardTitle, cardText, onClick }) {
   return (
-    <div className="flex flex-col h-full w-[400px]">
+    <div className="flex flex-col h-full w-[400px] max-[400px]:h-2/3 max-[400px]:bg-white">
       <img
         src={whichImg}
         className="h-1/2 object-cover"

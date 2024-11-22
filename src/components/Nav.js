@@ -107,12 +107,12 @@ function Nav() {
                   Company
                 </li>
               </Link>
-              <Link href="/project" className="text-[#006E8A] no-underline">
+              <Link href="/products" className="text-[#006E8A] no-underline">
                 <li
                   className="flex items-center justify-center text-nowrap px-3 cursor-pointer"
                   onClick={() => setOpenModal(false)}
                 >
-                  Project
+                  Products
                 </li>
               </Link>
               <Link href="/partners" className="text-[#006E8A] no-underline">

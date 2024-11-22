@@ -558,6 +558,16 @@ function Landing() {
               technologies to deliver robust, scalable, and future-proof
               solutions tailored to your business needs.
             </p>
+            <p className="text-white text-start">
+              <strong>Cutting-Edge Technology:</strong> We harness the latest
+              technologies to deliver robust, scalable, and future-proof
+              solutions tailored to your business needs.
+            </p>
+            <p className="text-white text-start">
+              <strong>Cutting-Edge Technology:</strong> We harness the latest
+              technologies to deliver robust, scalable, and future-proof
+              solutions tailored to your business needs.
+            </p>
             <p className="text-white text-start pb-6 max-sm:pb-2">
               <strong>Customer-Centric Approach:</strong> Our solutions are
               driven by a deep understanding of our clients' goals. We listen,
