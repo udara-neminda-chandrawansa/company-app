@@ -686,7 +686,7 @@ function Products() {
                 </Carousel>
                 <button
                   onClick={() => setOpenModal(true)}
-                  className="bg-white border-2 border-black px-1 text-sm rounded-full"
+                  className="bg-white md:hidden border-2 border-black px-1 text-sm rounded-full"
                 >
                   Add your feedback
                 </button>
