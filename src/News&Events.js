@@ -91,7 +91,7 @@ function NewsEvents() {
         className="min-h-[30dvh] bg-no-repeat bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <h1 className="uppercase text-5xl text-start text-white w-full px-12 m-0">
+        <h1 className="uppercase text-5xl max-md:text-4xl max-sm:text-2xl max-md:px-0  md:text-start text-white w-full px-12 m-0">
           News & Events
         </h1>
       </div>
