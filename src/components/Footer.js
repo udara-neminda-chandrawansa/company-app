@@ -1,6 +1,7 @@
 import footer_logo from "../images/footer-logo.png";
 import msc from "../images/footer-icons/mastercard.png";
 import vsc from "../images/footer-icons/visa.png";
+import { Link } from "wouter";
 
 function Footer() {
   return (
@@ -23,40 +24,40 @@ function Footer() {
           <div className="w-2/5 flex gap-6 max-lg:px-12 max-lg:w-full">
             <div className="w-1/2">
               <ul className="flex flex-col gap-6">
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Home
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/">Home</Link>
                 </li>
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Careers
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/careers">Careers</Link>
                 </li>
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Project
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/products">Products</Link>
                 </li>
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Contact
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2">
               <ul className="flex flex-col gap-6">
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Company
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/company">Company</Link>
                 </li>
-                <li className="text-[#023744] text-start cursor-pointer">
-                  News & Events
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/news">News & Events</Link>
                 </li>
-                <li className="text-[#023744] text-start cursor-pointer">
-                  Partners
+                <li className="text-start cursor-pointer">
+                  <Link className="no-underline text-[#023744]" href="/partners">Partners</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="w-3/5 max-lg:w-full">
             <ul className="flex flex-col gap-6">
-              <li className="text-[#023744] text-start font-semibold">
+              <li className="text-start font-semibold">
                 Contact Us
               </li>
-              <li className="text-[#023744] text-start cursor-pointer flex items-center gap-3">
+              <li className="text-start cursor-pointer flex items-center gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -75,7 +76,7 @@ function Footer() {
                   +94 77 747 2567
                 </a>
               </li>
-              <li className="text-[#023744] text-start cursor-pointer flex items-center gap-3">
+              <li className="text-start cursor-pointer flex items-center gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -91,7 +92,7 @@ function Footer() {
                   support@siliconradonnetworks.com
                 </a>
               </li>
-              <li className="text-[#023744] text-start cursor-pointer flex items-center gap-3 max-xl:text-sm max-lg:text-xs">
+              <li className="text-start cursor-pointer flex items-center gap-3 max-xl:text-sm max-lg:text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

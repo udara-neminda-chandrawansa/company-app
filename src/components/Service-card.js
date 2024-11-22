@@ -26,7 +26,7 @@ function ServiceCard({ whichImg, cardTitle, cardText, imgOnSide }) {
           <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text max-md:text-center">
             {cardTitle}
           </h1>
-          <p className="text-sm max-md:px-6">{cardText}</p>
+          <p className="text-sm max-md:text-center max-md:px-6">{cardText}</p>
           <span className="w-full flex max-md:justify-center">
             <button className="bg-[#006E8A] text-white w-fit py-3 px-12 rounded flex justify-center items-center">
               View All
@@ -47,7 +47,7 @@ function ServiceCard({ whichImg, cardTitle, cardText, imgOnSide }) {
         <h1 className="text-2xl uppercase bg-gradient-to-r from-[#006E8A] to-[#57B377] text-transparent bg-clip-text max-md:text-center">
           {cardTitle}
         </h1>
-        <p className="text-sm max-md:px-6">{cardText}</p>
+        <p className="text-sm max-md:text-center max-md:px-6">{cardText}</p>
         <span className="w-full flex max-md:justify-center">
           <button className="bg-[#006E8A] text-white w-fit py-3 px-12 rounded flex justify-center items-center">
             View All

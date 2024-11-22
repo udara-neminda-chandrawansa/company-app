@@ -24,11 +24,11 @@ function Nav() {
             </li>
           </Link>
           <Link
-            href="/project"
+            href="/products"
             className="text-white no-underline"
           >
             <li className="flex items-center justify-center dark:text-black text-nowrap px-3 cursor-pointer max-lg:text-sm max-[972px]:text-xs">
-              Project
+              Products
             </li>
           </Link>
           <Link

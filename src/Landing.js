@@ -184,7 +184,7 @@ function Landing() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-arrow-right-circle w-[30px] h-[30px] text-[#006E8A] max-sm:text-transparent"
+                  className="bi bi-arrow-right-circle w-[30px] h-[30px] text-transparent"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -197,7 +197,7 @@ function Landing() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  className="bi bi-arrow-right-circle w-[30px] h-[30px] text-[#006E8A] max-sm:text-transparent"
+                  className="bi bi-arrow-right-circle w-[30px] h-[30px] text-transparent"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -211,7 +211,7 @@ function Landing() {
               <ServiceCard
                 whichImg="mob"
                 cardTitle="Mobile Application Development"
-                cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+                cardText="At Silicon Radon Networks, our Mobile App Development service transforms your vision into reality. Our skilled developers create intuitive, high-performance mobile applications tailored to your business objectives. From concept to deployment, we ensure a seamless user experience across all platforms. Partner with us to enhance your digital presence and engage your audience with innovative, custom-built mobile solutions."
               />
               <ServiceCard
                 whichImg="desk"
@@ -221,17 +221,17 @@ function Landing() {
               <ServiceCard
                 whichImg="web"
                 cardTitle="Web Development"
-                cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+                cardText="Silicon Radon Networks offers premier Web Development services designed to elevate your online presence. Our team of expert developers crafts responsive, dynamic, and secure websites tailored to your unique business needs. From e-commerce platforms to corporate websites, we ensure a seamless user experience and cutting-edge functionality. Partner with us to create a powerful online identity and drive your business forward with our custom web solutions."
               />
               <ServiceCard
                 whichImg="uxui"
                 cardTitle="UI/UX Designing"
-                cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+                cardText="At Silicon Radon Networks, our UI/UX Design service focuses on creating visually stunning and user-centric interfaces. Our talented designers prioritize user experience, ensuring every interaction is intuitive and engaging. From wireframes to final designs, we blend creativity with functionality to deliver exceptional digital experiences. Partner with us to elevate your brand’s aesthetic and usability, ensuring your products resonate with your audience and stand out in the market."
               />
               <ServiceCard
                 whichImg="va"
                 cardTitle="Virtual Assistant"
-                cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+                cardText="Silicon Radon Networks provides top-notch Virtual Assistant services to streamline your operations and boost productivity. Our skilled virtual assistants handle a variety of tasks, from administrative support to customer service and beyond, allowing you to focus on your core business activities. With our reliable and efficient virtual assistance, you can enhance your workflow, save time, and achieve your business goals. Partner with us for seamless and professional support tailored to your specific needs."
               />
             </Carousel>
           </div>
@@ -240,7 +240,7 @@ function Landing() {
             <ServiceCard
               whichImg="mob"
               cardTitle="Mobile Application Development"
-              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              cardText="At Silicon Radon Networks, our Mobile App Development service transforms your vision into reality. Our skilled developers create intuitive, high-performance mobile applications tailored to your business objectives. From concept to deployment, we ensure a seamless user experience across all platforms. Partner with us to enhance your digital presence and engage your audience with innovative, custom-built mobile solutions."
               imgOnSide="true"
             />
             <ServiceCard
@@ -251,17 +251,17 @@ function Landing() {
             <ServiceCard
               whichImg="web"
               cardTitle="Web Development"
-              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              cardText="Silicon Radon Networks offers premier Web Development services designed to elevate your online presence. Our team of expert developers crafts responsive, dynamic, and secure websites tailored to your unique business needs. From e-commerce platforms to corporate websites, we ensure a seamless user experience and cutting-edge functionality. Partner with us to create a powerful online identity and drive your business forward with our custom web solutions."
             />
             <ServiceCard
               whichImg="uxui"
               cardTitle="UI/UX Designing"
-              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              cardText="At Silicon Radon Networks, our UI/UX Design service focuses on creating visually stunning and user-centric interfaces. Our talented designers prioritize user experience, ensuring every interaction is intuitive and engaging. From wireframes to final designs, we blend creativity with functionality to deliver exceptional digital experiences. Partner with us to elevate your brand’s aesthetic and usability, ensuring your products resonate with your audience and stand out in the market."
             />
             <ServiceCard
               whichImg="va"
               cardTitle="Virtual Assistant"
-              cardText="Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way."
+              cardText="Silicon Radon Networks provides top-notch Virtual Assistant services to streamline your operations and boost productivity. Our skilled virtual assistants handle a variety of tasks, from administrative support to customer service and beyond, allowing you to focus on your core business activities. With our reliable and efficient virtual assistance, you can enhance your workflow, save time, and achieve your business goals. Partner with us for seamless and professional support tailored to your specific needs."
               imgOnSide="true"
             />
           </div>
@@ -552,16 +552,6 @@ function Landing() {
               reality and delivering innovative software solutions that drive
               real business value. Here’s why our customers continue to choose
               us as their trusted technology partner:
-            </p>
-            <p className="text-white text-start">
-              <strong>Cutting-Edge Technology:</strong> We harness the latest
-              technologies to deliver robust, scalable, and future-proof
-              solutions tailored to your business needs.
-            </p>
-            <p className="text-white text-start">
-              <strong>Cutting-Edge Technology:</strong> We harness the latest
-              technologies to deliver robust, scalable, and future-proof
-              solutions tailored to your business needs.
             </p>
             <p className="text-white text-start">
               <strong>Cutting-Edge Technology:</strong> We harness the latest
