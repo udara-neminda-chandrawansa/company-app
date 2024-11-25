@@ -145,25 +145,28 @@ function Products() {
     <div className="">
       {/*banner*/}
       <div
-        className="h-[40dvh] max-lg:h-[50dvh] bg-no-repeat bg-cover flex flex-col justify-center text-start text-white"
+        className="h-[45%] max-lg:h-[50%] bg-no-repeat bg-cover flex flex-col justify-center text-start text-white"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <h1 className="font-thin pl-12 max-md:pl-0 tiro-bangla text-5xl max-xl:text-4xl max-md:text-3xl max-sm:text-2xl max-md:text-center">
-          Our Products
-        </h1>
-        <p className="px-12 max-md:px-6 max-md:text-sm max-md:text-center max-sm:text-xs">
-          Silicon Radon Networks offers premier Web Development services
-          designed to elevate your online presence. Our team of expert
-          developers crafts responsive, dynamic, and secure websites tailored to
-          your unique business needs. From e-commerce platforms to corporate
-          websites, we ensure a seamless user experience and cutting-edge
-          functionality. Partner with us to create a powerful online identity
-          and drive your business forward with our custom web solutions.
-        </p>
+        <div className="flex flex-col gap-3 py-24">
+          <h1 className="font-thin pl-12 m-0 max-md:pl-0 tiro-bangla text-5xl max-xl:text-4xl max-md:text-3xl max-sm:text-2xl max-md:text-center">
+            Our Products
+          </h1>
+          <p className="px-12 max-md:px-6 max-md:text-sm max-md:text-center max-sm:text-xs m-0">
+            Silicon Radon Networks offers premier Web Development services
+            designed to elevate your online presence. Our team of expert
+            developers crafts responsive, dynamic, and secure websites tailored
+            to your unique business needs. From e-commerce platforms to
+            corporate websites, we ensure a seamless user experience and
+            cutting-edge functionality. Partner with us to create a powerful
+            online identity and drive your business forward with our custom web
+            solutions.
+          </p>
+        </div>
       </div>
       {/*product cards*/}
       <div
-        className={`h-[60dvh] max-lg:h-[50dvh] flex justify-center items-center ${
+        className={`h-[55%] max-lg:h-[50%] py-12 flex justify-center items-center ${
           productPaneVisible === true ? "hidden" : "flex"
         }`}
       >
@@ -222,10 +225,10 @@ function Products() {
         <CCarousel
           indicators
           dark
-          className="w-5/6 h-full flex justify-center items-center max-lg:hidden"
+          className="w-5/6 mt-3 h-full flex justify-center items-center max-lg:hidden"
         >
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-3">
+            <div className="h-full flex justify-center gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -237,7 +240,7 @@ function Products() {
                   "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={lms}
                 cardTitle={"LMS System"}
@@ -249,7 +252,7 @@ function Products() {
                   "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={inv}
                 cardTitle={"Inventory Control System"}
@@ -264,7 +267,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-3">
+            <div className="h-full flex justify-center gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -276,7 +279,7 @@ function Products() {
                   "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={lms}
                 cardTitle={"LMS System"}
@@ -288,7 +291,7 @@ function Products() {
                   "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={inv}
                 cardTitle={"Inventory Control System"}
@@ -303,7 +306,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-3">
+            <div className="h-full flex justify-center gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -315,7 +318,7 @@ function Products() {
                   "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and rec..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={lms}
                 cardTitle={"LMS System"}
@@ -327,7 +330,7 @@ function Products() {
                   "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee t..."
                 }
               ></ProductCard>
-              <div className="w-[2px] bg-black"></div>
+              <div className="w-[1px] bg-black"></div>
               <ProductCard
                 whichImg={inv}
                 cardTitle={"Inventory Control System"}
@@ -545,7 +548,7 @@ function Products() {
                   </button>
                   <button
                     onClick={() => setOpenModal(true)}
-                    className="bg-white border-2 border-black px-1 text-sm rounded-full"
+                    className="bg-white border-2 border-black px-1 text-sm rounded-full absolute right-5"
                   >
                     Add your feedback
                   </button>
@@ -554,7 +557,7 @@ function Products() {
               {/*client feedback list - for max-md*/}
               <div>
                 <Carousel
-                  className="max-md:block h-[70dvh] hidden"
+                  className="max-md:block h-[70%] hidden"
                   leftControl={<p className="text-transparent"></p>}
                   rightControl={<p className="text-transparent"></p>}
                   indicators={false}

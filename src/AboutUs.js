@@ -89,16 +89,18 @@ function AboutUs() {
       </AnimatedWrapper>
       <AnimatedWrapper>
         {/*CEO*/}
-        <div className="bg-[#00838F26] h-fit py-12 flex text-start px-24 max-md:px-6 gap-6 max-md:flex-col">
+        <div className="bg-[#00838F26] h-fit py-12 flex text-start px-40 max-lg:px-24 max-md:px-6 gap-3 max-md:flex-col">
+          {/*show this heading on max-md (small screens)*/}
           <h1 className="tiro-bangla text-5xl p-0 m-0 hidden text-center max-md:block">
             C.E.O
           </h1>
           <img
             src={ceo}
-            className="max-h-[400px] object-contain"
+            className="max-lg:max-h-[400px] object-cover max-md:object-contain"
             alt="ceo"
           ></img>
-          <div className="flex flex-col justify-between gap-6 max-[900px]:justify-start max-md:items-center">
+          <div className="flex flex-col justify-between gap-3 max-[900px]:justify-start max-md:items-center">
+            {/*show this heading on md (large screens)*/}
             <h1 className="tiro-bangla text-5xl p-0 m-0 max-md:hidden">
               C.E.O
             </h1>

@@ -49,7 +49,7 @@ function ContactUs() {
                   <input
                     type="text"
                     id="name"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-black peer"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-t-0 border-l-0 border-r-0 border-b-[1px] border-b-white appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
                     placeholder=" "
                   />
                   <label
@@ -63,7 +63,7 @@ function ContactUs() {
                   <input
                     type="email"
                     id="email"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-black peer"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-t-0 border-l-0 border-r-0 border-b-[1px] border-b-white appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-black peer"
                     placeholder=" "
                   />
                   <label
