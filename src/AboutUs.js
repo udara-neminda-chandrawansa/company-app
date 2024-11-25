@@ -82,7 +82,6 @@ function AboutUs() {
           </p>
         </AnimatedWrapper>
       </div>
-
       <AnimatedWrapper>
         {/*Video*/}
         <VideoPlayer></VideoPlayer>
