@@ -44,7 +44,7 @@ function Partners() {
       </div>
       <div className="h-fit py-12 max-sm:justify-center max-sm:items-center">
         {/* Static grid for larger screens */}
-        <div className="h-full flex flex-wrap px-24 gap-5 w-full max-md:hidden">
+        <div className="h-full flex justify-center flex-wrap px-24 gap-5 w-full max-md:hidden">
           <div
             className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
             style={{ backgroundImage: `url(${depositPhotos})` }}
