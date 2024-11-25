@@ -382,7 +382,7 @@ function Products() {
           alt="product-pane-banner"
         ></img>
         {/*feedbacks (list with stars)*/}
-        <div className="py-6 flex flex-col justify-center items-center h-[800px] max-md:h-fit">
+        <div className="py-6 flex flex-col justify-center items-center h-[800px]">
           <div className="flex w-full h-full">
             <div
               className="w-1/5 bg-cover bg-center"
@@ -555,17 +555,17 @@ function Products() {
                 </div>
               </div>
               {/*client feedback list - for max-md*/}
-              <div>
+              <div className="max-md:block md:hidden">
                 <Carousel
-                  className="max-md:block h-[70%] hidden"
-                  leftControl={<p className="text-transparent"></p>}
-                  rightControl={<p className="text-transparent"></p>}
-                  indicators={false}
+                  className="max-md:h-[600px] w-full"
+                  leftControl={<p className="text-transparent">left</p>}
+                  rightControl={<p className="text-transparent">right</p>}
                 >
-                  <div className="pt-24 max-sm:pt-12">
-                    <span className="flex items-center h-full gap-3 px-3">
+                  {/*feedback items*/}
+                  <div className="pt-24 h-[600px] flex flex-col justify-center max-sm:pt-12">
+                    <span className="flex items-center gap-3 px-3">
                       <img
-                        className="w-[60px] max-md:w-[30px] aspect-square object-cover"
+                        className="w-[60px] max-md:w-[30px] aspect-square"
                         src={products[selectedProduct][4][0][0]}
                         alt="feedback-company"
                       ></img>
@@ -593,7 +593,7 @@ function Products() {
                       {products[selectedProduct][4][0][3]}
                     </p>
                   </div>
-                  <div className="pt-24 max-sm:pt-12">
+                  <div className="pt-24 h-[600px] flex flex-col justify-center max-sm:pt-12">
                     <span className="flex items-center gap-3 px-3">
                       <img
                         className="w-[60px] max-md:w-[30px] aspect-square"
@@ -624,7 +624,7 @@ function Products() {
                       {products[selectedProduct][4][1][3]}
                     </p>
                   </div>
-                  <div className="pt-24 max-sm:pt-12">
+                  <div className="pt-24 h-[600px] flex flex-col justify-center max-sm:pt-12">
                     <span className="flex items-center gap-3 px-3">
                       <img
                         className="w-[60px] max-md:w-[30px] aspect-square"
@@ -655,7 +655,7 @@ function Products() {
                       {products[selectedProduct][4][2][3]}
                     </p>
                   </div>
-                  <div className="pt-24 max-sm:pt-12">
+                  <div className="pt-24 h-[600px] flex flex-col justify-center max-sm:pt-12">
                     <span className="flex items-center gap-3 px-3">
                       <img
                         className="w-[60px] max-md:w-[30px] aspect-square"
