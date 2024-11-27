@@ -1,5 +1,5 @@
 import banner from "./images/ContactUs/banner.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Carousel } from "flowbite-react";
 import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 import TextTypingAnimation from "./components/TextTypingAnimation";
@@ -15,6 +15,7 @@ function ContactUs() {
     setBranch(branches[index]);
   };
 
+  /*
   useEffect(() => {
     // Add the 'dark' class to the root element on page load
     document.documentElement.classList.add("dark");
@@ -24,18 +25,19 @@ function ContactUs() {
       document.documentElement.classList.remove("dark");
     };
   }, []);
+  */
 
   return (
     <div>
       <AnimatedWrapper>
         <div
-          className="h-dvh bg-no-repeat bg-cover flex flex-col justify-center"
+          className="flex flex-col justify-center bg-no-repeat bg-cover h-dvh"
           style={{ backgroundImage: `url(${banner})` }}
         >
           <div className="bg-[#006E8AB2] max-md:bg-[#408DA1B5] h-2/3 flex max-md:flex-col max-md:h-full">
-            <div className="flex flex-col w-1/2 text-start text-white p-12 max-md:pt-24 max-sm:px-6 max-md:w-full max-md:py-0">
+            <div className="flex flex-col w-1/2 p-12 text-white text-start max-md:pt-24 max-sm:px-6 max-md:w-full max-md:py-0">
               <h1 className="font-light">Contact Us</h1>
-              <p className="text-2xl max-lg:text-xl max-sm:text-base font-light line-height-40">
+              <p className="text-2xl font-light max-lg:text-xl max-sm:text-base line-height-40">
                 Reach out to Silicon Radon Networks for any inquiries about our
                 IT solutions, network services, or support needs. Our team is
                 ready to assist you with expert advice and tailored solutions to
@@ -78,7 +80,7 @@ function ContactUs() {
                   className="flex flex-grow p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-black focus:border-black"
                   placeholder="Enter Your Message"
                 ></textarea>
-                <span className="w-full flex justify-end">
+                <span className="flex justify-end w-full">
                   <button
                     type="button"
                     className="w-fit max-sm:w-full max-sm:justify-center text-black bg-white hover:bg-black focus:ring-1 focus:outline-none focus:ring-black font-medium rounded-lg text-sm px-2.5 py-2.5 text-center inline-flex items-center gap-6"
@@ -99,10 +101,10 @@ function ContactUs() {
           </div>
         </div>
       </AnimatedWrapper>
-      <div className="h-dvh p-12 gap-12 flex flex-col max-md:p-6 max-md:gap-6">
+      <div className="flex flex-col gap-12 p-12 h-dvh max-md:p-6 max-md:gap-6">
         <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-full flex items-center rounded-lg">
           {/*only shown on md*/}
-          <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-lg:text-sm max-md:hidden">
+          <ul className="flex justify-between w-full px-12 m-0 text-white uppercase max-md:p-0 max-lg:text-sm max-md:hidden">
             {branches.map((branch, index) => (
               <li
                 key={branch}
@@ -174,7 +176,7 @@ function ContactUs() {
           {/*details*/}
           <div className="w-1/3 h-full max-md:w-full max-md:h-1/3">
             <ul className="flex flex-col justify-between h-full m-0 max-lg:text-sm max-md:text-xs max-md:text-start">
-              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
+              <li className="flex items-center justify-center gap-3 md:flex-col max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -206,7 +208,7 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
+              <li className="flex items-center justify-center gap-3 md:flex-col max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -240,7 +242,7 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start transition-all delay-300">
+              <li className="flex items-center justify-center gap-3 transition-all delay-300 md:flex-col max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -272,7 +274,7 @@ function ContactUs() {
                   />
                 )}
               </li>
-              <li className="flex md:flex-col items-center gap-3 justify-center max-md:justify-start">
+              <li className="flex items-center justify-center gap-3 md:flex-col max-md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
