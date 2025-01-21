@@ -6,7 +6,7 @@ function Nav() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="h-[50px] bg-[#000000A6] z-50 max-[940px]:h-full">
+    <div className="h-[50px] bg-[#000000A6] max-[940px]:bg-transparent z-50 max-[940px]:h-full">
       {/*normal nav*/}
       <div className="flex justify-between w-full px-10 h-[50px] max-[940px]:hidden">
         <ul className="flex items-center justify-start w-1/3 h-full">

@@ -89,7 +89,7 @@ function Landing() {
     <>
       {/*Banner*/}
       <div
-        className="flex flex-col h-4/5 bg-no-repeat bg-cover transition-all delay-300 max-md:h-dvh"
+        className="flex flex-col transition-all delay-300 bg-no-repeat bg-cover h-4/5 max-md:h-dvh"
         style={{ backgroundImage: `url(${banners[currentBanner].img})` }}
       >
         {/*Top layer (backdrop)*/}
@@ -97,7 +97,7 @@ function Landing() {
         <AnimatedWrapper>
           {/*text content*/}
           <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
-            <h1 className="text-5xl text-white z-10 font-medium w-full text-start max-lg:text-4xl max-md:font-thin">
+            <h1 className="z-10 w-full text-5xl font-medium text-white text-start max-lg:text-4xl max-md:font-thin">
               Nothing Is More Attractive Than Quality
             </h1>
             <p
@@ -114,21 +114,21 @@ function Landing() {
       </div>
       <AnimatedWrapper>
         {/*card container*/}
-        <div className="flex h-1/5 w-full items-center justify-center gap-6 relative bottom-8 max-md:hidden">
+        <div className="relative flex items-center justify-center w-full gap-6 h-1/5 bottom-8 max-md:hidden">
           <div
-            className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
+            className="w-1/5 bg-no-repeat bg-cover xl:w-1/6 aspect-square"
             style={{ backgroundImage: `url(${card_1})` }}
           ></div>
           <div
-            className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
+            className="w-1/5 bg-no-repeat bg-cover xl:w-1/6 aspect-square"
             style={{ backgroundImage: `url(${card_2})` }}
           ></div>
           <div
-            className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
+            className="w-1/5 bg-no-repeat bg-cover xl:w-1/6 aspect-square"
             style={{ backgroundImage: `url(${card_3})` }}
           ></div>
           <div
-            className="w-1/5 xl:w-1/6 aspect-square bg-no-repeat bg-cover"
+            className="w-1/5 bg-no-repeat bg-cover xl:w-1/6 aspect-square"
             style={{ backgroundImage: `url(${card_4})` }}
           ></div>
         </div>
@@ -138,14 +138,14 @@ function Landing() {
         <div className="max-md:h-0 h-[30px]"></div>
         {/*welcome to silicon radon... */}
         <div
-          className="flex flex-col gap-3 px-9 items-center justify-center h-fit w-full bg-no-repeat bg-cover bg-fixed bg-center py-6"
+          className="flex flex-col items-center justify-center w-full gap-3 py-6 bg-fixed bg-center bg-no-repeat bg-cover px-9 h-fit"
           style={
             window.innerWidth > 768
               ? { backgroundImage: `url(${welcome_img})` }
               : { backgroundImage: `url(${welcome_img_mob})` }
           }
         >
-          <h1 className="pt-serif-caption-regular text-4xl text-green-950 max-md:text-xl">
+          <h1 className="text-4xl pt-serif-caption-regular text-green-950 max-md:text-xl">
             Welcome To Silicon Radon Networks
           </h1>
           <p className="text-base max-md:text-sm">
@@ -174,11 +174,11 @@ function Landing() {
       <AnimatedWrapper>
         {/*services*/}
         <div className="h-fit w-full flex flex-col gap-12 justify-center items-center p-[100px] max-sm:p-[30px]">
-          <h1 className="text-4xl uppercase w-full text-start max-md:text-xl">
+          <h1 className="w-full text-4xl uppercase text-start max-md:text-xl">
             Our Services
           </h1>
           {/* Carousel visible only on max-md */}
-          <div className="hidden max-md:flex w-full">
+          <div className="hidden w-full max-md:flex">
             <Carousel
               leftControl={
                 <svg
@@ -236,7 +236,7 @@ function Landing() {
             </Carousel>
           </div>
           {/* Static grid for larger screens */}
-          <div className="w-full flex flex-wrap justify-center max-md:hidden">
+          <div className="flex flex-wrap justify-center w-full max-md:hidden">
             <ServiceCard
               whichImg="mob"
               cardTitle="Mobile Application Development"
@@ -270,13 +270,13 @@ function Landing() {
       <AnimatedWrapper>
         {/*clients*/}
         <div
-          className="flex flex-col items-center gap-6 h-fit w-full bg-no-repeat bg-cover bg-fixed bg-center py-12 px-20 max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3"
+          className="flex flex-col items-center w-full gap-6 px-20 py-12 bg-fixed bg-center bg-no-repeat bg-cover h-fit max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3"
           style={{ backgroundImage: `url(${client_img})` }}
         >
           <h1 className="relative z-10 text-4xl text-white underline underline-offset-8 max-md:text-xl">
             Our Clients
           </h1>
-          <p className="text-sm max-md:text-xs text-white">
+          <p className="text-sm text-white max-md:text-xs">
             Silicon Radon Networks offers premier Web Development services
             designed to elevate your online presence. Our team of expert
             developers crafts responsive, dynamic, and secure websites tailored
@@ -287,7 +287,7 @@ function Landing() {
             solutions.
           </p>
           {/* Carousel visible only on max-md */}
-          <div className="hidden max-md:flex w-3/4">
+          <div className="hidden w-3/4 max-md:flex">
             <Carousel
               leftControl={
                 <svg
@@ -316,27 +316,27 @@ function Landing() {
                 </svg>
               }
               indicators={false}
-              className="rounded-se-3xl rounded-es-3xl bg-white transition-all delay-500"
+              className="transition-all delay-500 bg-white rounded-se-3xl rounded-es-3xl"
             >
               <ClientCard
-                whichImg={"slair"}
-                cardTitle={"SRI LANKAN AIRLINES"}
+                whichImg={"royal_havenwood"}
+                cardTitle={"Royal Havenwood Real Estate"}
                 cardText={
                   "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
                 }
                 cardAuthor={"- Dr. Darshana Haputhanthri -"}
               ></ClientCard>
               <ClientCard
-                whichImg={"slcus"}
-                cardTitle={"SRI LANKA CUSTOMS"}
+                whichImg={"muthukuda"}
+                cardTitle={"Muthukuda Constructions"}
                 cardText={
                   "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
                 }
                 cardAuthor={"- Dr. Darshana Haputhanthri -"}
               ></ClientCard>
               <ClientCard
-                whichImg={"sample"}
-                cardTitle={"LOGO TEXT"}
+                whichImg={"itic"}
+                cardTitle={"ITIC"}
                 cardText={
                   "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
                 }
@@ -347,24 +347,24 @@ function Landing() {
           {/* Static grid for larger screens */}
           <div className="flex justify-center gap-12 max-md:hidden">
             <ClientCard
-              whichImg={"slair"}
-              cardTitle={"SRI LANKAN AIRLINES"}
+              whichImg={"royal_havenwood"}
+              cardTitle={"Royal Havenwood Real Estate"}
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
               cardAuthor={"- Dr. Darshana Haputhanthri -"}
             ></ClientCard>
             <ClientCard
-              whichImg={"slcus"}
-              cardTitle={"SRI LANKA CUSTOMS"}
+              whichImg={"muthukuda"}
+              cardTitle={"Muthukuda Constructions"}
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
               cardAuthor={"- Dr. Darshana Haputhanthri -"}
             ></ClientCard>
             <ClientCard
-              whichImg={"sample"}
-              cardTitle={"LOGO TEXT"}
+              whichImg={"itic"}
+              cardTitle={"ITIC"}
               cardText={
                 "“Our customers are at the heart of everything we do. We partner with businesses of all sizes to deliver tailored software solutions that drive growth, efficiency, and innovation. By understanding your unique needs, we craft technology that empowers you to thrive in a rapidly changing digital landscape. Your success is our mission, and we are committed to supporting you every step of the way.”"
               }
@@ -375,7 +375,7 @@ function Landing() {
       </AnimatedWrapper>
       <AnimatedWrapper>
         {/*strength*/}
-        <div className="flex flex-col items-center gap-6 h-fit w-full py-12 px-20 max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3">
+        <div className="flex flex-col items-center w-full gap-6 px-20 py-12 h-fit max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3">
           <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl">
             Our Strength
           </h1>
@@ -418,59 +418,59 @@ function Landing() {
               }
               indicators={false}
             >
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${figma_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${react_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${laravel_i})` }}
                 ></div>
               </div>
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${nodejs_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${flutter_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${catppuccin_i})` }}
                 ></div>
               </div>
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${nextjs_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${python_i})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${springboot_i})` }}
                 ></div>
               </div>
               <div className="flex justify-center">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-contain"
+                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${java_i})` }}
                 ></div>
               </div>
             </Carousel>
           </div>
           {/* Static grid for larger screens */}
-          <div className="flex flex-col gap-6 px-20 w-full max-md:hidden">
-            <div className="flex gap-10 justify-center">
+          <div className="flex flex-col w-full gap-6 px-20 max-md:hidden">
+            <div className="flex justify-center gap-10">
               <div
                 className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
                 style={{ backgroundImage: `url(${figma_i})` }}
@@ -492,7 +492,7 @@ function Landing() {
                 style={{ backgroundImage: `url(${flutter_i})` }}
               ></div>
             </div>
-            <div className="flex gap-10 justify-center">
+            <div className="flex justify-center gap-10">
               <div
                 className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
                 style={{ backgroundImage: `url(${catppuccin_i})` }}
@@ -520,15 +520,15 @@ function Landing() {
       <AnimatedWrapper>
         {/*our quality*/}
         <div
-          className="flex justify-between h-fit bg-no-repeat bg-cover bg-fixed bg-center max-md:flex-col max-md:bg-t"
+          className="flex justify-between bg-fixed bg-center bg-no-repeat bg-cover h-fit max-md:flex-col max-md:bg-t"
           style={
             window.innerWidth > 768
               ? { backgroundImage: `url(${quality})` }
               : { backgroundImage: `url(${quality_mob})` }
           }
         >
-          <div className="w-1/2 flex flex-col justify-center max-md:w-full max-md:py-24">
-            <div className="flex items-center flex-col">
+          <div className="flex flex-col justify-center w-1/2 max-md:w-full max-md:py-24">
+            <div className="flex flex-col items-center">
               <div className="w-fit">
                 <h1 className="text-white text-3xl max-lg:text-2xl text-start max-[375px]:text-xl">
                   The Best
@@ -546,7 +546,7 @@ function Landing() {
             id="quality-scrollable"
             className="w-1/2 flex flex-col items-center gap-6 px-12 max-md:bg-[#000000CF] max-sm:px-4 max-lg:gap-3 max-md:text-sm max-sm:text-xs max-h-[500px] overflow-y-scroll no-scrollbar max-md:w-full max-md:h-1/2"
           >
-            <p className="text-white text-start pt-12 max-md:pt-6">
+            <p className="pt-12 text-white text-start max-md:pt-6">
               At Silicon Radon Networks, we place our customers at the heart of
               everything we do. We’re passionate about transforming ideas into
               reality and delivering innovative software solutions that drive
@@ -568,7 +568,7 @@ function Landing() {
               technologies to deliver robust, scalable, and future-proof
               solutions tailored to your business needs.
             </p>
-            <p className="text-white text-start pb-6 max-sm:pb-2">
+            <p className="pb-6 text-white text-start max-sm:pb-2">
               <strong>Customer-Centric Approach:</strong> Our solutions are
               driven by a deep understanding of our clients' goals. We listen,
               collaborate, and customize our offerings to fit your unique
@@ -576,7 +576,7 @@ function Landing() {
             </p>
             <button
               onClick={scrollDown}
-              className="sticky bottom-5 bg-white rounded-full max-md:hidden"
+              className="sticky bg-white rounded-full bottom-5 max-md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -604,7 +604,7 @@ function Landing() {
           <CCarousel
             indicators
             dark
-            className="hidden max-lg:flex w-full justify-center items-center"
+            className="items-center justify-center hidden w-full max-lg:flex"
           >
             <CCarouselItem className="">
               <div className="h-[350px] flex justify-center">
@@ -639,7 +639,7 @@ function Landing() {
           <CCarousel
             indicators
             dark
-            className="w-5/6 flex justify-center items-center max-lg:hidden"
+            className="flex items-center justify-center w-5/6 max-lg:hidden"
           >
             <CCarouselItem className="">
               <div className="h-[350px] flex justify-center gap-3">

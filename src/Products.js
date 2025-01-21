@@ -9,10 +9,12 @@ import banner from "./images/Products/banner.png";
 import pos from "./images/Products/cards/pos.png";
 import lms from "./images/Products/cards/lms.png";
 import inv from "./images/Products/cards/inv.png";
-import examplecus from "./images/AboutUs/partners/examplecus.png";
-import creative from "./images/AboutUs/partners/creative.png";
-import vw from "./images/AboutUs/partners/vw.png";
-import adcreative from "./images/AboutUs/partners/adcreative.png";
+
+import royal_havenwood from "./images/AboutUs/partners/royal_havenwood.jpg";
+import muthukuda from "./images/AboutUs/partners/muthukuda.jpg";
+import itic from "./images/AboutUs/partners/itic.jpg";
+import tech_house from "./images/AboutUs/partners/tech_house.jpg";
+
 import prodPaneBanner_1 from "./images/Products/product-pane/banner-1.png";
 import prodPaneBanner_2 from "./images/Products/product-pane/banner-2.png";
 import prodPaneBanner_3 from "./images/Products/product-pane/banner-3.png";
@@ -23,6 +25,33 @@ function Products() {
   const [productPaneVisible, setProductPaneVisible] = useState(false);
   const [selectedProduct, selectProduct] = useState(0);
 
+  const feedbacks = [
+    [
+      royal_havenwood,
+      "Royal Havenwood Real Estate",
+      5,
+      "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
+    ],
+    [
+      muthukuda,
+      "Muthukuda Constructions",
+      5,
+      "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
+    ],
+    [
+      itic,
+      "ITIC",
+      5,
+      "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
+    ],
+    [
+      tech_house,
+      "Tech House",
+      5,
+      "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
+    ],
+  ];
+
   const products = [
     // [product img, name, desc, client feedback [[client name, no of stars, desc], [client name, no of stars, desc]...]...]
     [
@@ -30,96 +59,21 @@ function Products() {
       "POS System",
       "A Point of Sale (POS) system is a technology solution that facilitates transactions in retail, hospitality, and other customer-facing industries. At its core, it combines hardware (such as cash registers, barcode scanners, and receipt printers) with software to process sales, manage payments, and track customer purchases. Modern POS systems go beyond simple sales processing, offering inventory tracking, employee management, customer relationship management (CRM), and detailed analytics for business growth. POS systems streamline checkout processes, reducing human error and improving customer satisfaction. Integrated with payment gateways, they enable seamless handling of multiple payment methods, such as cash, credit cards, and digital wallets. By analyzing sales data, POS systems help businesses identify trends, track product performance, and optimize stock levels. Cloud-based POS solutions further enhance accessibility by enabling real-time monitoring and reporting across multiple locations. Whether for small businesses or large enterprises, a POS system is an essential tool for efficient operations and informed decision-making.",
       prodPaneBanner_1,
-      [
-        [
-          adcreative,
-          "Company 1",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          vw,
-          "Company 2",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          creative,
-          "Company 3",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          examplecus,
-          "Company 4",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-      ],
+      feedbacks,
     ],
     [
       lms,
       "LMS System",
       "A Learning Management System (LMS) is a digital platform designed to deliver, manage, and assess educational or training content. LMS solutions are widely used in schools, universities, and businesses for e-learning and employee training programs. These systems centralize course materials, such as videos, documents, quizzes, and discussion forums, enabling learners to access content anytime and from anywhere. Administrators can track progress, measure engagement, and evaluate the effectiveness of courses using built-in analytics and reporting tools. For educators and trainers, LMS platforms simplify course creation, customization, and scheduling, often supporting gamification, certification, and social learning features. Learners benefit from interactive and self-paced modules, fostering greater retention and motivation. Cloud-based LMS solutions also integrate with other tools, such as video conferencing and collaboration platforms, enhancing the overall learning experience. By bridging gaps between learners and instructors, LMS systems promote accessibility, scalability, and lifelong learning.",
       prodPaneBanner_2,
-      [
-        [
-          adcreative,
-          "Company 1",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          vw,
-          "Company 2",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          creative,
-          "Company 3",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          examplecus,
-          "Company 4",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-      ],
+      feedbacks,
     ],
     [
       inv,
       "Inventory Control System",
       "An Inventory Management System (IMS) is a software solution designed to track, control, and optimize the storage and flow of goods within a business. It ensures that stock levels are accurately monitored, minimizing overstocking or shortages that could disrupt operations or customer satisfaction. IMS tools automate processes such as inventory tracking, order management, restocking alerts, and reporting, improving efficiency across supply chains. Modern inventory systems integrate with barcode scanners, RFID technology, and point-of-sale systems, enabling real-time updates and streamlined inventory audits. For businesses with large-scale operations, advanced IMS platforms incorporate predictive analytics and demand forecasting to align inventory levels with market trends. Cloud-based solutions offer centralized management across multiple locations, allowing businesses to monitor stock status remotely. From small retailers to large warehouses, an Inventory Management System is indispensable for reducing costs, improving productivity, and maintaining customer satisfaction.",
       prodPaneBanner_3,
-      [
-        [
-          adcreative,
-          "Company 1",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          vw,
-          "Company 2",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          creative,
-          "Company 3",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-        [
-          examplecus,
-          "Company 4",
-          5,
-          "Silicon Radon Networks is a standout IT company known for its innovative solutions, technical expertise, and strong customer focus. The company consistently demonstrates a commitment to delivering cutting-edge network and IT services, meeting client needs with high levels of efficiency and reliability. Their skilled team effectively handles complex challenges, building trust through the timely and high-quality execution of projects. However, there is room for improvement in enhancing communication channels to ensure consistent responsiveness throughout project phases, and expanding their service offerings to support scalability would help meet diverse industry demands. Overall, Silicon Radon Networks’ dedication to excellence and customer-centric approach positions it as a trusted partner in the IT industry.",
-        ],
-      ],
+      feedbacks,
     ],
   ];
 
@@ -149,10 +103,10 @@ function Products() {
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="flex flex-col gap-3 py-24">
-          <h1 className="font-thin pl-12 m-0 max-md:pl-0 tiro-bangla text-5xl max-xl:text-4xl max-md:text-3xl max-sm:text-2xl max-md:text-center">
+          <h1 className="pl-12 m-0 text-5xl font-thin max-md:pl-0 tiro-bangla max-xl:text-4xl max-md:text-3xl max-sm:text-2xl max-md:text-center">
             Our Products
           </h1>
-          <p className="px-12 max-md:px-6 max-md:text-sm max-md:text-center max-sm:text-xs m-0">
+          <p className="px-12 m-0 max-md:px-6 max-md:text-sm max-md:text-center max-sm:text-xs">
             Silicon Radon Networks offers premier Web Development services
             designed to elevate your online presence. Our team of expert
             developers crafts responsive, dynamic, and secure websites tailored
@@ -173,10 +127,10 @@ function Products() {
         {/*max-lg -> one card per slide*/}
         <CCarousel
           dark
-          className="hidden max-lg:flex w-full justify-center items-center"
+          className="items-center justify-center hidden w-full max-lg:flex"
         >
           <CCarouselItem className="">
-            <div className="h-full flex justify-center">
+            <div className="flex justify-center h-full">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -191,7 +145,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="">
-            <div className="h-full flex justify-center">
+            <div className="flex justify-center h-full">
               <ProductCard
                 whichImg={lms}
                 cardTitle={"LMS System"}
@@ -206,7 +160,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="">
-            <div className="h-full flex justify-center">
+            <div className="flex justify-center h-full">
               <ProductCard
                 whichImg={inv}
                 cardTitle={"Inventory Control System"}
@@ -225,10 +179,10 @@ function Products() {
         <CCarousel
           indicators
           dark
-          className="w-5/6 mt-3 h-full flex justify-center items-center max-lg:hidden"
+          className="flex items-center justify-center w-5/6 h-full mt-3 max-lg:hidden"
         >
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-4 mb-5">
+            <div className="flex justify-center h-full gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -267,7 +221,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-4 mb-5">
+            <div className="flex justify-center h-full gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -306,7 +260,7 @@ function Products() {
             </div>
           </CCarouselItem>
           <CCarouselItem className="h-full">
-            <div className="h-full flex justify-center gap-4 mb-5">
+            <div className="flex justify-center h-full gap-4 mb-5">
               <ProductCard
                 whichImg={pos}
                 cardTitle={"POS System"}
@@ -357,7 +311,7 @@ function Products() {
           <h5 className="flex justify-between items-center p-3 m-0 text-[#006E8A]">
             {products[selectedProduct][1]}
             <button
-              className="w-fit text-red-500 p-1"
+              className="p-1 text-red-500 w-fit"
               onClick={() => setProductPaneVisible(false)}
             >
               <svg
@@ -371,13 +325,13 @@ function Products() {
               </svg>
             </button>
           </h5>
-          <p className="md:text-start text-sm p-3 m-0">
+          <p className="p-3 m-0 text-sm md:text-start">
             {products[selectedProduct][2]}
           </p>
         </div>
         {/*prod-pane-banner (left side with thumbs up image)*/}
         <img
-          className="object-top object-cover"
+          className="object-cover object-top"
           src={products[selectedProduct][3]}
           alt="product-pane-banner"
         ></img>
@@ -385,7 +339,7 @@ function Products() {
         <div className="py-6 flex flex-col justify-center items-center h-[800px]">
           <div className="flex w-full h-full">
             <div
-              className="w-1/5 bg-cover bg-center"
+              className="w-1/5 bg-center bg-cover"
               style={{ backgroundImage: `url(${feedbackBanner})` }}
             >
               <span className="relative w-full flex justify-end gap-3 pt-6 max-sm:pt-3 pr-6 max-sm:pr-3 max-[375px]:pr-1">
@@ -404,7 +358,7 @@ function Products() {
                 </h1>
               </span>
               {/*client feedback list - for md*/}
-              <div className="max-md:hidden block">
+              <div className="block max-md:hidden">
                 <div className="pt-24 max-sm:pt-12">
                   <span className="flex items-center gap-3 px-3">
                     <img
@@ -412,7 +366,7 @@ function Products() {
                       src={products[selectedProduct][4][0][0]}
                       alt="feedback-company"
                     ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                    <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][0][1]}
                     </h5>
                     <span className="flex gap-1">
@@ -432,7 +386,7 @@ function Products() {
                       )}
                     </span>
                   </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                  <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                     {products[selectedProduct][4][0][3]}
                   </p>
                 </div>
@@ -443,7 +397,7 @@ function Products() {
                       src={products[selectedProduct][4][1][0]}
                       alt="feedback-company"
                     ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                    <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][1][1]}
                     </h5>
                     <span className="flex gap-1">
@@ -463,7 +417,7 @@ function Products() {
                       )}
                     </span>
                   </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                  <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                     {products[selectedProduct][4][1][3]}
                   </p>
                 </div>
@@ -474,7 +428,7 @@ function Products() {
                       src={products[selectedProduct][4][2][0]}
                       alt="feedback-company"
                     ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                    <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][2][1]}
                     </h5>
                     <span className="flex gap-1">
@@ -494,7 +448,7 @@ function Products() {
                       )}
                     </span>
                   </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                  <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                     {products[selectedProduct][4][2][3]}
                   </p>
                 </div>
@@ -505,7 +459,7 @@ function Products() {
                       src={products[selectedProduct][4][3][0]}
                       alt="feedback-company"
                     ></img>
-                    <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                    <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][3][1]}
                     </h5>
                     <span className="flex gap-1">
@@ -525,14 +479,14 @@ function Products() {
                       )}
                     </span>
                   </span>
-                  <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                  <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                     {products[selectedProduct][4][3][3]}
                   </p>
                 </div>
-                <div className="sticky bottom-5 flex justify-evenly items-center">
+                <div className="sticky flex items-center bottom-5 justify-evenly">
                   <button
                     onClick={scrollDown}
-                    className="bg-white rounded-full border-2 border-black"
+                    className="bg-white border-2 border-black rounded-full"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -548,7 +502,7 @@ function Products() {
                   </button>
                   <button
                     onClick={() => setOpenModal(true)}
-                    className="bg-white border-2 border-black px-1 text-sm rounded-full absolute right-5"
+                    className="absolute px-1 text-sm bg-white border-2 border-black rounded-full right-5"
                   >
                     Add your feedback
                   </button>
@@ -569,7 +523,7 @@ function Products() {
                         src={products[selectedProduct][4][0][0]}
                         alt="feedback-company"
                       ></img>
-                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                      <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                         {products[selectedProduct][4][0][1]}
                       </h5>
                       <span className="flex gap-1">
@@ -589,7 +543,7 @@ function Products() {
                         )}
                       </span>
                     </span>
-                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                    <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][0][3]}
                     </p>
                   </div>
@@ -600,7 +554,7 @@ function Products() {
                         src={products[selectedProduct][4][1][0]}
                         alt="feedback-company"
                       ></img>
-                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                      <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                         {products[selectedProduct][4][1][1]}
                       </h5>
                       <span className="flex gap-1">
@@ -620,7 +574,7 @@ function Products() {
                         )}
                       </span>
                     </span>
-                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                    <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][1][3]}
                     </p>
                   </div>
@@ -631,7 +585,7 @@ function Products() {
                         src={products[selectedProduct][4][2][0]}
                         alt="feedback-company"
                       ></img>
-                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                      <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                         {products[selectedProduct][4][2][1]}
                       </h5>
                       <span className="flex gap-1">
@@ -651,7 +605,7 @@ function Products() {
                         )}
                       </span>
                     </span>
-                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                    <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][2][3]}
                     </p>
                   </div>
@@ -662,7 +616,7 @@ function Products() {
                         src={products[selectedProduct][4][3][0]}
                         alt="feedback-company"
                       ></img>
-                      <h5 className="max-md:text-sm max-sm:text-xs font-semibold m-0">
+                      <h5 className="m-0 font-semibold max-md:text-sm max-sm:text-xs">
                         {products[selectedProduct][4][3][1]}
                       </h5>
                       <span className="flex gap-1">
@@ -682,19 +636,19 @@ function Products() {
                         )}
                       </span>
                     </span>
-                    <p className="text-start p-3 max-md:text-sm max-sm:text-xs">
+                    <p className="p-3 text-start max-md:text-sm max-sm:text-xs">
                       {products[selectedProduct][4][3][3]}
                     </p>
                   </div>
                 </Carousel>
                 <button
                   onClick={() => setOpenModal(true)}
-                  className="bg-white md:hidden border-2 border-black px-1 text-sm rounded-full"
+                  className="px-1 text-sm bg-white border-2 border-black rounded-full md:hidden"
                 >
                   Add your feedback
                 </button>
               </div>
-              <span className="max-md:hidden h-0 m-0" ref={feedbackEnd}></span>
+              <span className="h-0 m-0 max-md:hidden" ref={feedbackEnd}></span>
             </div>
           </div>
         </div>
@@ -732,13 +686,13 @@ function Products() {
               </div>
             </div>
             <div>
-              <div className="mb-2 block">
+              <div className="block mb-2">
                 <Label htmlFor="name" value="Your company name" />
               </div>
               <TextInput id="name" type="name" required />
             </div>
             <div>
-              <div className="mb-2 block">
+              <div className="block mb-2">
                 <Label htmlFor="feedback" value="Your feedback" />
               </div>
               <Textarea rows={5} id="feedback" type="feedback" required />
@@ -749,7 +703,7 @@ function Products() {
                 <p className="hidden">{rating}</p>
               </div>
             </div>
-            <div className="w-full flex justify-center">
+            <div className="flex justify-center w-full">
               <Button>Submit</Button>
             </div>
           </div>
