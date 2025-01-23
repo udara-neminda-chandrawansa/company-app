@@ -8,7 +8,7 @@ function Footer() {
     <footer className="flex flex-col gap-6 bg-[#006E8A12] h-fit px-24 py-12 max-xl:px-16 max-sm:p-6">
       {/*up*/}
       <div className="flex items-center max-lg:flex-col">
-        <div className="w-2/5 flex flex-col gap-6 max-lg:w-full">
+        <div className="flex flex-col w-2/5 gap-6 max-lg:w-full">
           <img src={footer_logo} className="w-fit" alt={"footer logo"}></img>
           <p className="text-sm text-start text-[#023744]">
             Welcome to Silicon Radon Networks, where cutting-edge software
@@ -20,30 +20,30 @@ function Footer() {
             future of software development today.
           </p>
         </div>
-        <div className="w-3/5 flex gap-6 pl-12 py-6 max-lg:p-0 max-lg:w-full max-lg:flex-col">
-          <div className="w-2/5 flex gap-6 max-lg:px-12 max-lg:w-full">
+        <div className="flex w-3/5 gap-6 py-6 pl-12 max-lg:p-0 max-lg:w-full max-lg:flex-col">
+          <div className="flex w-2/5 gap-6 max-lg:px-12 max-lg:w-full">
             <div className="w-1/2">
               <ul className="flex flex-col gap-6">
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/">Home</Link>
                 </li>
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/products">Products</Link>
                 </li>
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2">
               <ul className="flex flex-col gap-6">
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/aboutus">About Us</Link>
                 </li>
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/news">News & Events</Link>
                 </li>
-                <li className="text-start cursor-pointer">
+                <li className="cursor-pointer text-start">
                   <Link className="no-underline text-[#023744]" href="/partners">Partners</Link>
                 </li>
               </ul>
@@ -51,10 +51,10 @@ function Footer() {
           </div>
           <div className="w-3/5 max-lg:w-full">
             <ul className="flex flex-col gap-6">
-              <li className="text-start font-semibold">
+              <li className="font-semibold text-start">
                 Contact Us
               </li>
-              <li className="text-start cursor-pointer flex items-center gap-3">
+              <li className="flex items-center gap-3 cursor-pointer text-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -73,7 +73,7 @@ function Footer() {
                   +94 77 747 2567
                 </a>
               </li>
-              <li className="text-start cursor-pointer flex items-center gap-3">
+              <li className="flex items-center gap-3 cursor-pointer text-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -89,7 +89,7 @@ function Footer() {
                   support@siliconradonnetworks.com
                 </a>
               </li>
-              <li className="text-start cursor-pointer flex items-center gap-3 max-xl:text-sm max-lg:text-xs">
+              <li className="flex items-center gap-3 cursor-pointer text-start max-xl:text-sm max-lg:text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -107,8 +107,12 @@ function Footer() {
       </div>
       {/*down*/}
       <div className="border-t-2 border-[#023744] h-full flex justify-between items-center pt-12 max-lg:flex-col-reverse max-lg:gap-12">
-        <p className="text-xs text-[#023744]">
-          Copyright © 2024 -Silicon Radon Networks (Pvt) Ltd - All Rights
+      <div className="flex items-center gap-6 max-lg:hidden">
+          <img src={msc} alt="mastercard" className="opacity-0"></img>
+          <img src={vsc} alt="visa" className="opacity-0"></img>
+        </div>
+        <p className="text-sm text-[#023744]">
+          © 2025 -Silicon Radon Networks (Pvt) Ltd - All Rights
           Reserved.
         </p>
         <div className="flex items-center gap-6">

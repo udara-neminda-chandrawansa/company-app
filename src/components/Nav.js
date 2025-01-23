@@ -76,7 +76,7 @@ function Nav() {
       {/*Modal*/}
       <Modal
         show={openModal}
-        position={"top-left"}
+        position={"top-center"}
         onClose={() => setOpenModal(false)}
       >
         <Modal.Header className="p-2 h-fit"></Modal.Header>

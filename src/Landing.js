@@ -63,6 +63,7 @@ function Landing() {
   const [currentBanner, setCurrentBanner] = useState(0); // initialize current banner image/text
   const [isTransitioning, setIsTransitioning] = useState(false); // initialize text transitioning
 
+  // useEffect for banner img transitions
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
@@ -89,26 +90,75 @@ function Landing() {
     <>
       {/*Banner*/}
       <div
-        className="flex flex-col transition-all delay-300 bg-no-repeat bg-cover h-4/5 max-md:h-dvh"
+        className="flex flex-col transition-all duration-[2000ms] bg-no-repeat bg-cover h-4/5 max-md:h-dvh"
         style={{ backgroundImage: `url(${banners[currentBanner].img})` }}
       >
         {/*Top layer (backdrop)*/}
         <div className="absolute h-4/5 inset-0 bg-gradient-to-br from-[transparent] to-[#022E39] max-md:h-dvh"></div>
         <AnimatedWrapper>
           {/*text content*/}
-          <div className="flex flex-col gap-12 justify-between w-full h-full items-center py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
-            <h1 className="z-10 w-full text-5xl font-medium text-white text-start max-lg:text-4xl max-md:font-thin">
+          <div className="flex flex-col gap-12 justify-between w-full h-full items-start py-56 max-sm:py-40 px-[70px] max-sm:px-[30px]">
+            <h1
+              className={`z-10 text-5xl font-medium text-white md:w-2/3 text-start max-lg:text-4xl max-md:font-thin transition-all duration-1000 ${
+                isTransitioning ? "opacity-0 " : "opacity-100 "
+              }`}
+            >
               Nothing Is More Attractive Than Quality
             </h1>
             <p
-              className={`text-base font-light text-white text-start bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm transition-all duration-300 ${
-                isTransitioning
-                  ? "opacity-0 translate-y-5"
-                  : "opacity-100 translate-y-0"
+              className={`text-base font-light text-white text-justify bg-gray-950 bg-opacity-30 z-10 p-3 max-sm:text-sm delay-500 transition-all duration-1000 ${
+                isTransitioning ? "opacity-0 " : "opacity-100 "
               }`}
             >
               {banners[currentBanner].text}
             </p>
+            <div className="hidden mt-4 space-x-2 lg:flex">
+            <span className="h-1 w-[100px] bg-white/10 rounded-full flex relative overflow-hidden">
+                <span
+                  className="absolute top-0 left-0 h-1 bg-white rounded-full"
+                  style={{
+                    width: `${currentBanner >= 0 ? "100px" : "0px"}`,
+                    transition: "width 7.5s linear",
+                  }}
+                ></span>
+              </span>
+              <span className="h-1 w-[100px] bg-white/10 rounded-full flex relative overflow-hidden">
+                <span
+                  className="absolute top-0 left-0 h-1 bg-white rounded-full"
+                  style={{
+                    width: `${currentBanner >= 1 ? "100px" : "0px"}`,
+                    transition: "width 7.5s linear",
+                  }}
+                ></span>
+              </span>
+              <span className="h-1 w-[100px] bg-white/10 rounded-full flex relative overflow-hidden">
+                <span
+                  className="absolute top-0 left-0 h-1 bg-white rounded-full"
+                  style={{
+                    width: `${currentBanner >= 2 ? "100px" : "0px"}`,
+                    transition: "width 7.5s linear",
+                  }}
+                ></span>
+              </span>
+              <span className="h-1 w-[100px] bg-white/10 rounded-full flex relative overflow-hidden">
+                <span
+                  className="absolute top-0 left-0 h-1 bg-white rounded-full"
+                  style={{
+                    width: `${currentBanner >= 3 ? "100px" : "0px"}`,
+                    transition: "width 7.5s linear",
+                  }}
+                ></span>
+              </span>
+              <span className="h-1 w-[100px] bg-white/10 rounded-full flex relative overflow-hidden">
+                <span
+                  className="absolute top-0 left-0 h-1 bg-white rounded-full"
+                  style={{
+                    width: `${currentBanner >= 4 ? "100px" : "0px"}`,
+                    transition: "width 7.5s linear",
+                  }}
+                ></span>
+              </span>
+            </div>
           </div>
         </AnimatedWrapper>
       </div>
@@ -145,7 +195,7 @@ function Landing() {
               : { backgroundImage: `url(${welcome_img_mob})` }
           }
         >
-          <h1 className="text-4xl pt-serif-caption-regular text-green-950 max-md:text-xl">
+          <h1 className="text-4xl font-bold text-green-950 max-md:text-xl">
             Welcome To Silicon Radon Networks
           </h1>
           <p className="text-base max-md:text-sm">
@@ -173,8 +223,8 @@ function Landing() {
       </AnimatedWrapper>
       <AnimatedWrapper>
         {/*services*/}
-        <div className="h-fit w-full flex flex-col gap-12 justify-center items-center p-[100px] max-sm:p-[30px]">
-          <h1 className="w-full text-4xl uppercase text-start max-md:text-xl">
+        <div className="h-fit w-full flex flex-col gap-12 justify-center items-center p-[100px] px-[30px] max-sm:p-[30px]">
+          <h1 className="w-full text-4xl font-bold uppercase text-start max-md:text-xl">
             Our Services
           </h1>
           {/* Carousel visible only on max-md */}
@@ -273,7 +323,7 @@ function Landing() {
           className="flex flex-col items-center w-full gap-6 px-20 py-12 bg-fixed bg-center bg-no-repeat bg-cover h-fit max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3"
           style={{ backgroundImage: `url(${client_img})` }}
         >
-          <h1 className="relative z-10 text-4xl text-white underline underline-offset-8 max-md:text-xl">
+          <h1 className="relative z-10 text-4xl font-bold text-white max-md:text-xl">
             Our Clients
           </h1>
           <p className="text-sm text-white max-md:text-xs">
@@ -376,7 +426,7 @@ function Landing() {
       <AnimatedWrapper>
         {/*strength*/}
         <div className="flex flex-col items-center w-full gap-6 px-20 py-12 h-fit max-lg:py-10 max-lg:px-10 max-md:py-6 max-md:px-3">
-          <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl">
+          <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl font-bold">
             Our Strength
           </h1>
           <p className="text-sm">
@@ -420,7 +470,7 @@ function Landing() {
             >
               <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
+                  className="hidden w-1/12 bg-no-repeat bg-contain rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${figma_i})` }}
                 ></div>
                 <div
@@ -472,7 +522,7 @@ function Landing() {
           <div className="flex flex-col w-full gap-6 px-20 max-md:hidden">
             <div className="flex justify-center gap-10">
               <div
-                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain"
+                className="w-[5%] aspect-square rounded-lg bg-no-repeat bg-contain hidden"
                 style={{ backgroundImage: `url(${figma_i})` }}
               ></div>
               <div
@@ -597,7 +647,7 @@ function Landing() {
       <AnimatedWrapper>
         {/*news*/}
         <div className="h-fit w-full flex flex-col gap-12 justify-center items-center p-[100px] max-sm:p-[30px]">
-          <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl">
+          <h1 className="relative z-10 text-4xl text-[#022E39] max-md:text-xl font-bold">
             News & Upcoming Events
           </h1>
           {/*max-lg -> one card per slide*/}

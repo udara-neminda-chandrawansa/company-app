@@ -8,14 +8,14 @@ import AnimatedWrapper from "./components/AnimatedWrapper.tsx";
 import { BlurIn } from "./components/TextBlurIn.tsx";
 import { BlurImage } from "./components/BlurImage.tsx";
 import ceo from "./images/AboutUs/ceo.png";
-import depositPhotos from "./images/AboutUs/partners/depositphotos.png";
-import slair from "./images/AboutUs/partners/slair.png";
-import slcus from "./images/AboutUs/partners/slcus.png";
-import examplecus from "./images/AboutUs/partners/examplecus.png";
-import creative from "./images/AboutUs/partners/creative.png";
-import vw from "./images/AboutUs/partners/vw.png";
-import adcreative from "./images/AboutUs/partners/adcreative.png";
-import colorful from "./images/AboutUs/partners/colorful.png";
+import depositPhotos from "./images/AboutUs/partners/itic.jpg";
+import slair from "./images/AboutUs/partners/ceylon_company.jpg";
+import slcus from "./images/AboutUs/partners/insight_media.jpg";
+import examplecus from "./images/AboutUs/partners/muthukuda.jpg";
+import creative from "./images/AboutUs/partners/radon_pixel.jpg";
+import vw from "./images/AboutUs/partners/royal_circle.jpg";
+import adcreative from "./images/AboutUs/partners/tech_house.jpg";
+import colorful from "./images/AboutUs/partners/travel_gate.jpg";
 import gam1 from "./images/AboutUs/branches/gampaha/gam1.png";
 import gam2 from "./images/AboutUs/branches/gampaha/gam2.png";
 import gam3 from "./images/AboutUs/branches/gampaha/gam3.png";
@@ -37,11 +37,11 @@ function AboutUs() {
     <>
       {/*Banner*/}
       <div
-        className="bg-cover h-dvh flex flex-col justify-center items-center"
+        className="flex flex-col items-center justify-center bg-cover h-dvh"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <AnimatedWrapper>
-          <div className="w-full flex text-white text-start px-12">
+          <div className="flex w-full px-12 text-white text-start">
             <h1 className="max-md:hidden">
               <span className="urbanist max-md:text-2xl max-lg:text-3xl max-xl:text-5xl">
                 “
@@ -67,12 +67,12 @@ function AboutUs() {
         </AnimatedWrapper>
       </div>
       {/*Mission*/}
-      <div className="h-fit py-12 gap-12 flex items-center flex-col">
+      <div className="flex flex-col items-center gap-12 py-12 h-fit">
         <AnimatedWrapper>
           <h1 className="poltawski-nowy w-full text-center text-4xl text-[#022E39] max-md:text-3xl">
             Our Mission
           </h1>
-          <p className="text-3xl max-md:text-2xl max-sm:text-lg font-light px-24 max-md:px-12">
+          <p className="px-24 text-3xl font-light max-md:text-2xl max-sm:text-lg max-md:px-12">
             Our mission is to deliver high-performing IT infrastructure, network
             security, and managed services that enhance productivity, streamline
             operations, and secure data for organizations worldwide. We take
@@ -90,7 +90,7 @@ function AboutUs() {
         {/*CEO*/}
         <div className="bg-[#00838F26] h-fit py-12 flex text-start px-40 max-lg:px-24 max-md:px-6 gap-3 max-md:flex-col">
           {/*show this heading on max-md (small screens)*/}
-          <h1 className="tiro-bangla text-5xl p-0 m-0 hidden text-center max-md:block">
+          <h1 className="hidden p-0 m-0 text-5xl text-center tiro-bangla max-md:block">
             C.E.O
           </h1>
           <img
@@ -100,7 +100,7 @@ function AboutUs() {
           ></img>
           <div className="flex flex-col justify-between gap-3 max-[900px]:justify-start max-md:items-center">
             {/*show this heading on md (large screens)*/}
-            <h1 className="tiro-bangla text-5xl p-0 m-0 max-md:hidden">
+            <h1 className="p-0 m-0 text-5xl tiro-bangla max-md:hidden">
               C.E.O
             </h1>
             <p className="text-2xl max-lg:text-xl max-[835px]:text-base font-light text-justify p-0 m-0 max-md:text-center">
@@ -122,8 +122,8 @@ function AboutUs() {
       </AnimatedWrapper>
       <AnimatedWrapper>
         {/*Partnerships*/}
-        <div className="w-full flex flex-col items-center py-12 gap-12">
-          <h1 className="tiro-bangla text-4xl p-0 m-0">Our Partnerships</h1>
+        <div className="flex flex-col items-center w-full gap-12 py-12">
+          <h1 className="p-0 m-0 text-4xl tiro-bangla">Our Partnerships</h1>
           <p className="px-12 m-0">
             Silicon Radon Networks offers premier Web Development services
             designed to elevate your online presence. Our team of expert
@@ -165,49 +165,49 @@ function AboutUs() {
               }
               indicators={false}
             >
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${depositPhotos})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${slair})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${slcus})` }}
                 ></div>
               </div>
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${examplecus})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${creative})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${vw})` }}
                 ></div>
               </div>
-              <div className="flex gap-12 justify-center">
+              <div className="flex justify-center gap-12">
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${adcreative})` }}
                 ></div>
                 <div
-                  className="w-1/12 max-sm:w-1/6 aspect-square rounded-lg bg-no-repeat bg-cover"
+                  className="w-1/12 bg-no-repeat bg-cover rounded-lg max-sm:w-1/6 aspect-square"
                   style={{ backgroundImage: `url(${colorful})` }}
                 ></div>
               </div>
             </Carousel>
           </div>
           {/* Static grid for larger screens */}
-          <div className="flex flex-col gap-6 px-20 w-full max-md:hidden">
-            <div className="flex gap-10 justify-center">
+          <div className="flex flex-col w-full gap-6 px-20 max-md:hidden">
+            <div className="flex justify-center gap-10">
               <div
                 className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${depositPhotos})` }}
@@ -225,7 +225,7 @@ function AboutUs() {
                 style={{ backgroundImage: `url(${examplecus})` }}
               ></div>
             </div>
-            <div className="flex gap-10 justify-center">
+            <div className="flex justify-center gap-10">
               <div
                 className="w-[7%] aspect-square rounded-lg bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url(${creative})` }}
@@ -249,13 +249,13 @@ function AboutUs() {
       <AnimatedWrapper>
         {/*Branches*/}
         <div
-          className="py-12 gap-12 max-md:gap-1 flex flex-col items-center bg-fixed bg-cover"
+          className="flex flex-col items-center gap-12 py-12 bg-fixed bg-cover max-md:gap-1"
           style={{ backgroundImage: `url(${brbg})` }}
         >
-          <h1 className="tiro-bangla p-0 m-0 text-4xl">Our Branches</h1>
+          <h1 className="p-0 m-0 text-4xl tiro-bangla">Our Branches</h1>
           <span className="hidden max-md:flex h-11"></span>
-          <div className="w-5/6 flex gap-1 max-md:flex-col">
-            <div className="w-3/5 flex flex-col gap-1 max-md:w-full">
+          <div className="flex w-5/6 gap-1 max-md:flex-col">
+            <div className="flex flex-col w-3/5 gap-1 max-md:w-full">
               <BlurImage
                 key={`1-${selectedBranch}`} // Unique key per image
                 src={
@@ -305,19 +305,19 @@ function AboutUs() {
               </div>
             </div>
             <div className="w-2/5 bg-[#006E8A] text-white flex flex-col justify-center items-center gap-6 max-md:gap-0 max-md:w-full max-md:min-h-[300px] max-md:justify-between">
-              <h1 className="text-center py-6 tiro-bangla w-full hidden m-0 max-md:block">
+              <h1 className="hidden w-full py-6 m-0 text-center tiro-bangla max-md:block">
                 <BlurIn key={selectedBranch}>{selectedBranch} Branch</BlurIn>
               </h1>
               <div className="w-full px-12 tiro-bangla max-md:hidden">
-                <h1 className="text-start w-full">
+                <h1 className="w-full text-start">
                   <BlurIn key={selectedBranch}>{selectedBranch}</BlurIn>
                 </h1>
-                <h1 className="text-end w-full">
+                <h1 className="w-full text-end">
                   <BlurIn key={selectedBranch}>Branch</BlurIn>
                 </h1>
               </div>
               <div className="w-full px-12">
-                <ul className="flex flex-col m-0 max-md:pb-6 text-start gap-3 max-md:text-sm">
+                <ul className="flex flex-col gap-3 m-0 max-md:pb-6 text-start max-md:text-sm">
                   <li className="flex items-center gap-3">
                     <div>
                       <svg
@@ -455,7 +455,7 @@ function AboutUs() {
             </div>
           </div>
           <div className="bg-[#006E8A] h-[100px] max-md:h-fit max-md:py-3 w-5/6 flex items-center">
-            <ul className="uppercase text-white flex w-full justify-between px-12 m-0 max-md:p-0 max-sm:text-xs">
+            <ul className="flex justify-between w-full px-12 m-0 text-white uppercase max-md:p-0 max-sm:text-xs">
               <li
                 id="gam-b-clickable"
                 className={`branch-clickable cursor-pointer max-md:p-1 max-[350px]:p-0 ${
@@ -500,8 +500,8 @@ function AboutUs() {
       </AnimatedWrapper>
       <AnimatedWrapper>
         {/*Awards*/}
-        <div className="py-12 gap-12 flex flex-col items-center">
-          <h1 className="tiro-bangla p-0 m-0 text-4xl">Awards</h1>
+        <div className="flex flex-col items-center gap-12 py-12">
+          <h1 className="p-0 m-0 text-4xl tiro-bangla">Awards</h1>
           <p className="px-12 m-0">
             Silicon Radon Networks offers premier Web Development services
             designed to elevate your online presence. Our team of expert
@@ -513,7 +513,7 @@ function AboutUs() {
             solutions.
           </p>
           {/* Carousel visible only on max-md */}
-          <div className="hidden max-md:flex w-5/6">
+          <div className="hidden w-5/6 max-md:flex">
             <Carousel
               leftControl={
                 <svg
@@ -558,7 +558,7 @@ function AboutUs() {
             </Carousel>
           </div>
           {/* Static grid for larger screens */}
-          <div className="w-full max-md:hidden flex justify-evenly gap-1">
+          <div className="flex w-full gap-1 max-md:hidden justify-evenly">
             <AwardCard
               whichImg="award1"
               cardText="The Best Software Company In SRI LANKA -2024"
